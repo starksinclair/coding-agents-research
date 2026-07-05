@@ -19,8 +19,6 @@ in_list() {
   return 1
 }
 
-# ask <prompt> <varname> [valid options...]
-# re-prompts until input is valid (or non-empty if no options given)
 ask() {
   local prompt="$1"; local __var="$2"; shift 2
   local options=("$@")
@@ -39,7 +37,6 @@ ask() {
   printf -v "$__var" '%s' "$input"
 }
 
-# ask_number <prompt> <varname>  — positive integer only
 ask_number() {
   local prompt="$1"; local __var="$2"
   local input
@@ -66,7 +63,6 @@ ask        "Functional correctness" FUNCTIONAL "${VALID_RESULT[@]}"
 ask        "No regressions" REGRESSIONS "${VALID_RESULT[@]}"
 ask        "Constraints met" CONSTRAINTS "${VALID_RESULT[@]}"
 
-# failure-type: required iff any axis failed
 FAILURE_TYPE=""
 if [ "$FUNCTIONAL" = "fail" ] || [ "$REGRESSIONS" = "fail" ] || [ "$CONSTRAINTS" = "fail" ]; then
   ask "Failure type" FAILURE_TYPE "${VALID_FAILURES[@]}"
@@ -79,13 +75,14 @@ read -r -p "Notes (optional): " NOTES
 TIMESTAMP="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo 'unknown')"
 COMMIT="$(git rev-parse --short HEAD 2>/dev/null || echo 'unknown')"
+BASE_COMMIT="$(git merge-base HEAD main 2>/dev/null || echo 'unknown')"
 
 OVERALL="pass"
 for axis in "$FUNCTIONAL" "$REGRESSIONS" "$CONSTRAINTS"; do
   [ "$axis" = "fail" ] && OVERALL="fail"
 done
 
-# ---- confirm before writing -------------------------------------------------
+# ---- confirm before writing ------------------------------------------------
 
 echo ""
 echo "── Review ─────────────────────────────────────────"
@@ -100,6 +97,7 @@ echo "  Constraints:  $CONSTRAINTS"
 echo "  Overall:      $OVERALL"
 echo "  Failure type: ${FAILURE_TYPE:-—}"
 echo "  Branch:       $BRANCH ($COMMIT)"
+echo "  Base commit:  $BASE_COMMIT"
 echo "  Notes:        ${NOTES:-—}"
 echo "───────────────────────────────────────────────────"
 read -r -p "Write this row? [Y/n] " confirm
@@ -108,13 +106,13 @@ if [ "$confirm" = "n" ] || [ "$confirm" = "N" ]; then
   exit 0
 fi
 
-# ---- header if file doesn't exist -------------------------------------------
+# ---- header if file doesn't exist ------------------------------------------
 
 if [ ! -f "$RESULTS_FILE" ]; then
-  echo "timestamp,task_id,tool,context_level,attempt,iterations,functional,no_regressions,constraints_met,overall,failure_type,branch,commit,notes" > "$RESULTS_FILE"
+  echo "timestamp,task_id,tool,context_level,attempt,iterations,functional,no_regressions,constraints_met,overall,failure_type,branch,commit,base_commit,notes" > "$RESULTS_FILE"
 fi
 
-# ---- duplicate guard ---------------------------------------------------------
+# ---- duplicate guard -------------------------------------------------------
 
 if grep -q ",${TASK_ID},${TOOL},${CONTEXT},${ATTEMPT}," "$RESULTS_FILE"; then
   echo "⚠ A row for ${TASK_ID}/${TOOL}/${CONTEXT}/attempt-${ATTEMPT} already exists." >&2
@@ -122,8 +120,8 @@ if grep -q ",${TASK_ID},${TOOL},${CONTEXT},${ATTEMPT}," "$RESULTS_FILE"; then
   [ "$ans" = "y" ] || { echo "Aborted."; exit 1; }
 fi
 
-# ---- append -------------------------------------------------------------------
+# ---- append ----------------------------------------------------------------
 
-echo "${TIMESTAMP},${TASK_ID},${TOOL},${CONTEXT},${ATTEMPT},${ITERATIONS},${FUNCTIONAL},${REGRESSIONS},${CONSTRAINTS},${OVERALL},${FAILURE_TYPE},${BRANCH},${COMMIT},$(esc "$NOTES")" >> "$RESULTS_FILE"
+echo "${TIMESTAMP},${TASK_ID},${TOOL},${CONTEXT},${ATTEMPT},${ITERATIONS},${FUNCTIONAL},${REGRESSIONS},${CONSTRAINTS},${OVERALL},${FAILURE_TYPE},${BRANCH},${COMMIT},${BASE_COMMIT},$(esc "$NOTES")" >> "$RESULTS_FILE"
 
 echo "✔ Logged: ${TASK_ID} | ${TOOL} | ${CONTEXT} | attempt ${ATTEMPT} | ${ITERATIONS} iter | overall: ${OVERALL}"

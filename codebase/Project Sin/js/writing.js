@@ -1,117 +1,52 @@
-//1ST SLIDER
-var slideIndex = 1;
-showDi4(slideIndex);
+function makeCarousel(slideClass, dotClass) {
+  var index = 1;
 
-function plusDi4(n) {
-  showDi4(slideIndex += n);
-}
-
-function currentDi4(n) {
-  showDi4(slideIndex = n);
-}
-
-function showDi4(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlid4");
-  var dots = document.getElementsByClassName("dem4")
-  ;
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  function show(n) {
+    var slides = document.getElementsByClassName(slideClass);
+    var dots = document.getElementsByClassName(dotClass);
+    if (!slides.length) return;
+    if (n > slides.length) { index = 1; }
+    else if (n < 1) { index = slides.length; }
+    else { index = n; }
+    for (var i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (var j = 0; j < dots.length; j++) {
+      dots[j].className = dots[j].className.replace(" w3-white", "");
+    }
+    slides[index - 1].style.display = "block";
+    if (dots[index - 1]) {
+      dots[index - 1].className += " w3-white";
+    }
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
+
+  show(index);
+  return {
+    plus: function (n) { show(index + n); },
+    current: function (n) { show(n); }
+  };
 }
 
-//2ND SLIDE
-var slideIndex = 1;
-showDi5(slideIndex);
+var carouselWriting1 = makeCarousel("mySlid4", "dem4");
+var carouselWriting2 = makeCarousel("mySlid5", "dem5");
+var carouselWriting3 = makeCarousel("mySlid6", "dem6");
+var carouselWriting4 = makeCarousel("mySlid7", "dem7");
 
-function plusDi5(n) {
-  showDi5(slideIndex += n);
-}
+function plusDi4(n) { carouselWriting1.plus(n); }
+function currentDi4(n) { carouselWriting1.current(n); }
+function showDi4(n) { carouselWriting1.current(n); }
 
-function currentDi5(n) {
-  showDi5(slideIndex = n);
-}
+function plusDi5(n) { carouselWriting2.plus(n); }
+function currentDi5(n) { carouselWriting2.current(n); }
+function showDi5(n) { carouselWriting2.current(n); }
 
-function showDi5(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlid5");
-  var dots = document.getElementsByClassName("dem5")
-  ;
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
+function plusDi6(n) { carouselWriting3.plus(n); }
+function currentDi6(n) { carouselWriting3.current(n); }
+function showDi6(n) { carouselWriting3.current(n); }
 
-var slideIndex = 1;
-showDi6(slideIndex);
-
-function plusDi6(n) {
-  showDi6(slideIndex += n);
-}
-
-function currentDi6(n) {
-  showDi6(slideIndex = n);
-}
-
-function showDi6(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlid6");
-  var dots = document.getElementsByClassName("dem6")
-  ;
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-
-//4TH SLIDER
-var slideIndex = 1;
-showDi7(slideIndex);
-
-function plusDi7(n) {
-  showDi7(slideIndex += n);
-}
-
-function currentDi7(n) {
-  showDi7(slideIndex = n);
-}
-
-function showDi7(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlid7");
-  var dots = document.getElementsByClassName("dem7")
-  ;
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
+function plusDi7(n) { carouselWriting4.plus(n); }
+function currentDi7(n) { carouselWriting4.current(n); }
+function showDi7(n) { carouselWriting4.current(n); }
 
 
 // FOR HIDE/SHOW FORM
