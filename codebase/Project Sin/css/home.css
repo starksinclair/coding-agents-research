@@ -429,7 +429,7 @@ html {
 /* FOOTER */
 .footer {
   background-color: #007180;
-  height: 440px;
+  padding-bottom: 2rem;
 }
 .footer a {
   color: #f2f2f2;

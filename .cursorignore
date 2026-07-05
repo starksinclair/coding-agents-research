@@ -1,0 +1,8 @@
+prompts/
+tasks/
+scripts/
+.DS_Store
+.gitignore
+.gitignore
+node_modules/
+PROTOCOL.md
