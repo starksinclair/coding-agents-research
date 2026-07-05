@@ -10,7 +10,7 @@
 #   4. Branch off dev/<tool> into experiments/<tool>/<task>-attempt-<n>
 #
 # Branch model:
-#   main                      — clean baseline, never touched during experiments
+#   master                      — clean baseline, never touched during experiments
 #   dev/<tool>                — cumulative merges of all passing fixes for that tool
 #   experiments/<tool>/<task>-attempt-<n>  — individual run, branches off dev/<tool>
 
@@ -97,15 +97,15 @@ fi
 
 if ! git show-ref --quiet "refs/heads/${DEV_BRANCH}"; then
   echo ""
-  echo "── Creating $DEV_BRANCH (branching from main) ──────"
-  git checkout main
+  echo "── Creating $DEV_BRANCH (branching from master) ──────"
+  git checkout master
   git checkout -b "$DEV_BRANCH"
   echo "✔ Created $DEV_BRANCH"
 fi
 
 # ---- step 3: merge current experiment branch into dev/<tool> ---------------
 
-# Only merge if we're coming from an experiment branch (not main/dev)
+# Only merge if we're coming from an experiment branch (not master/dev)
 if [[ "$CURRENT_BRANCH" == experiments/* ]]; then
   echo ""
   echo "── Merging $CURRENT_BRANCH → $DEV_BRANCH ───────────"
@@ -114,7 +114,7 @@ if [[ "$CURRENT_BRANCH" == experiments/* ]]; then
   echo "✔ Merged into $DEV_BRANCH"
 else
   echo "ℹ Skipping merge — not on an experiment branch (current: $CURRENT_BRANCH)"
-  git checkout "$DEV_BRANCH" 2>/dev/null || git checkout main
+  git checkout "$DEV_BRANCH" 2>/dev/null || git checkout master
 fi
 
 # ---- step 4: create new experiment branch off dev/<tool> -------------------
