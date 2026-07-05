@@ -1,0 +1,255 @@
+@media all and (min-width: 800px) {
+  .open-slide {
+    display: none;
+  }
+  .accordion {
+    display: none;
+  }
+}
+@media all and (min-width: 992px) {
+  .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+    z-index: 100;
+  }
+  .fixed-nav .navbar a {
+    color: var(--clr-grey-1);
+  }
+  .fixed-nav .navbar a:hover {
+    color: var(--clr-secondary);
+  }
+  .fixed-nav #join {
+    color: #111;
+    border: 2px solid var(--clr-secondary);
+  }
+  .fixed-nav2 {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+    visibility: visible;
+    z-index: 100;
+    transition: var(--transition);
+  }
+  .fixed-nav2 .bottom-nav {
+    visibility: visible;
+    z-index: 100;
+  }
+  .fixed-nav2 .bottom-nav a {
+    color: #595959;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .fixed-nav2 .bottom-nav a:hover {
+    color: var(--clr-secondary);
+  }
+}
+
+@media all and (max-width: 800px) {
+  .header {
+    height: 400px;
+  }
+  .wraper {
+    display: none;
+  }
+  #sign-in {
+    display: none;
+  }
+  #join {
+    position: absolute;
+    top: 0px;
+    right: 16px;
+    color: black;
+    font-weight: bolder;
+    font-size: 25px;
+    /* border: 2px solid #00bcd4; */
+  }
+  .fa-bars {
+    font-size: 30px;
+    color: black;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+  }
+  .logo {
+    margin-right: 100px;
+  }
+  .navbar {
+    background-color: white;
+  }
+  .detal {
+    display: none;
+  }
+  .text h1 {
+    font-size: 28px;
+  }
+  .text h3 {
+    font-size: 22px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+  #user,
+  #user1,
+  #detail {
+    display: none;
+  }
+  .brands {
+    position: relative;
+    margin-top: 0;
+  }
+  .brands span {
+    display: none;
+  }
+  .brands ul {
+    margin-top: -80px;
+  }
+  .brands ul img {
+    margin-right: 20px;
+  }
+  .facebook {
+    width: 23%;
+  }
+  .google {
+    width: 14%;
+  }
+  .paypal {
+    width: 18%;
+  }
+  .micro {
+    width: 21%;
+  }
+  .all {
+    margin-top: 10px;
+  }
+  .all p {
+    font-size: 20px;
+  }
+  #video {
+    width: 350px;
+  }
+  #tile {
+    font-size: 24px;
+    padding-right: 30px;
+  }
+  #tile::after {
+    position: absolute;
+    bottom: -15px;
+    left: 29%;
+  }
+  .imr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .start {
+    height: 190px;
+  }
+  .img2 {
+    margin-right: 20px;
+    width: 180px;
+    height: 130px;
+  }
+  .test ul {
+    display: flex;
+    padding: 10px;
+  }
+  .test ul h4 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .fot {
+    display: none;
+  }
+  .accordion {
+    display: block;
+  }
+  .footer {
+    height: 290px;
+  }
+  .fa-facebook,
+  .fa-pinterest,
+  .fa-linkedin,
+  .fa-twitter,
+  .fa-instagram {
+    /* margin-left: 5px; */
+    margin-right: 35px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .foote ul {
+    display: flex;
+    margin-left: 35px;
+  }
+  .foote img {
+    text-align: center;
+    display: block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+    /* margin-left: 180px; */
+  }
+  .foote span {
+    align-content: center;
+    justify-content: center;
+    margin-left: -10px;
+    text-align: center;
+  }
+  .review-box4 {
+    display: none;
+  }
+  /* .top-link {
+    font-size: 1.1rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background: var(--clr-secondary);
+    width: 2rem;
+    height: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius);
+    padding-left: 0px;
+    color: var(--clr-white);
+    animation: bounce 2s ease-in-out infinite;
+    visibility: hidden;
+    z-index: -100;
+  } */
+
+  /* MARKETING
+  .search-bar button{
+    background-color: var(--clr-secondary);
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: #007180;
+  }
+  .fa-search{
+    position: absolute;
+    top: 10px;
+    left: 225px;
+  }
+  #input{
+    width: 40%;
+    margin-left: 150px;
+    margin-top: -10px;
+  } */
+}
+@media screen and (max-width: 400px) {
+  .fa-facebook,
+  .fa-pinterest,
+  .fa-linkedin,
+  .fa-twitter,
+  .fa-instagram {
+    /* margin-left: 5px; */
+    margin-right: 15px;
+  }
+}

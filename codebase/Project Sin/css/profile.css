@@ -1,0 +1,150 @@
+.profile-pic1 {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.profile-box .fa-star {
+  margin-top: 0px;
+  position: relative;
+  left: 0px;
+}
+.profile-box pre {
+  font-size: 17px;
+}
+.profile-box .fa-flag {
+  color: grey;
+}
+.profile-bx {
+  line-height: 5px;
+}
+.profile-box1 button {
+  border: 1px solid grey;
+  border-radius: 30px;
+  margin: 5px;
+}
+.profile-box,
+.profile-box1 {
+  border: 1px solid #d9d9d9;
+}
+.w3-col.l2 {
+  width: 30.66666%;
+}
+.holder {
+  max-height: 340px;
+}
+.holder {
+  height: 360px;
+  margin-left: 20px;
+  margin-bottom: 0pt;
+}
+.pic {
+  height: 180px;
+  max-width: 100%;
+  max-height: 230px;
+}
+.down-pic {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+.holder h5 {
+  padding-left: 35pt;
+  margin-top: -40px;
+  font-weight: normal;
+  font-size: 14px;
+}
+.holder small {
+  padding-left: 35pt;
+  font-weight: bold;
+  margin-top: -10px;
+  color: grey;
+  font-size: 14px;
+}
+.holder p {
+  padding-left: 10px;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+  margin-top: 15px;
+  /* margin-bottom: -5px; */
+}
+.fa-heart {
+  font-size: 25px;
+  position: relative;
+  top: 10px;
+  left: 0;
+}
+.holder b {
+  display: flex;
+  margin-top: -10px;
+}
+.div {
+  margin-top: -10px;
+  border: 1px solid #f2f2f2;
+}
+.holder .fa-star {
+  position: relative;
+  top: -20px;
+  /* margin-top: -40px; */
+}
+.holder h6 {
+  color: grey;
+  font-size: 16px;
+  margin-top: -30px;
+  margin-right: 10px;
+  text-align: right;
+}
+.holder strong {
+  color: #333;
+  font-size: 15px;
+}
+.next,
+.prev {
+  border: 1px solid white;
+  background-color: white;
+}
+.view-bx .fa-star {
+  position: relative;
+  left: 0;
+}
+.view-bx h5 b {
+  color: grey;
+}
+.view-bx select {
+  position: relative;
+  top: 20px;
+  left: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+}
+.view-bx {
+  margin-top: 2rem;
+}
+.down-pic1 {
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+}
+.modal-facebook a {
+  color: #fff;
+}
+
+@media all and (max-width: 800px) {
+  .text-bx {
+    margin-top: -150px;
+  }
+  .profile-box,
+  .profile-box1 {
+    border: none;
+  }
+  .w3-col.l2 {
+    width: 90.66666%;
+  }
+  .holder {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,68 @@
+.nife{
+	margin-left: 100px;
+	text-align: right;
+}
+.fa-layer-group{
+	color: #0066ff;
+	font-size: 20px;
+
+}
+.nige{
+	background-color: white;
+	/*margin-left: 50px;*/
+}
+.nige a{
+	color: black;
+}
+.nife li{
+	color: black;
+}
+.nihe{
+	height: 450px;
+	background-image: url(../../img/Garden.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: 6%;
+}
+.head{
+	color: white;
+	padding-top: 30%;
+}
+.fa-facebook{
+	color: white;
+	font-size: 20px;
+	margin-top: 18%;
+}
+.fa-facebook-messenger{
+	color: white;
+	font-size: 20px;
+	margin-top: 18%;
+	margin-left: 10px;
+}
+.head1{
+	color: white;
+	margin-top: 30px;
+	position: absolute;
+	left: 110px;
+}
+.para{
+	color: #f2f2f2;
+	position: absolute;
+	left: 110px;
+	top: 60%;
+}
+.img{
+	/*margin-top: -70px;*/
+	position: absolute;
+	top: 30%;
+	left: 280px;
+	width: 20%;
+	height: 50px;
+}
+.head2{
+	/*color: white;*/
+}
+.nive{
+	margin-bottom: 30px;
+}

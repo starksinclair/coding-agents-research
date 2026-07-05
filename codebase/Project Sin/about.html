@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+<!-- Favicons -->
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png">
+  <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/png">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
+  <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/png">
+  <link rel="shortcut icon" href="img/android-chrome-512x512.png" type="image/png">
+  <link rel="shortcut icon" href="img/apple-touch-icon.png" type="image/png">
+  <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/home.css">
+  <!-- <link rel="stylesheet" href="css/web.css"> -->
+  <link rel="stylesheet" href="css/terms.css">
+  <!-- <link rel="stylesheet" href="css/bulma.css"> -->
+</head>
+<body class="w3-sand">
+  <header id="home">
+    <nav id="nav">
+      <div class="wrapper">
+        <div class="navbar w3-bar w3-container">
+          <a href="home.html"><span class="open-slide fa fa-bars" onclick="openSlideMenu()"></span></a>
+            <div class="logo">
+             <a href="#"><img src="img/saint2.png" alt="logo" class="img-fluid img" title="Saintly"></a>
+            </div>
+            <ul class="w3-content wraper">
+              <a href="home.html" class="w3-bar-item">Home</a>
+              <a href="vip.html" class="w3-bar-item">Saintly Vip</a>
+              <a href="explore.html" class="w3-bar-item">Explore</a>
+              <a href="about.html" class="w3-bar-item w3-text-light-cyan">About Saintly</a>
+              <a href="#" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
+            </ul>
+            <a href="#" class="w3-bar-item" id="sign-in" onclick="document.getElementById('id01').style.display='block'">Sign in</a>
+            <button class="w3-btn w3-bar-item register" id="join" onclick="document.getElementById('id02').style.display='block'">Join</button>
+            <!-- <div class="w3-dropdown-hover">
+            <i class="fa fa-user-circle"></i>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="#" class="w3-bar-item w3-button">Link 1</a>
+              <a href="#" class="w3-bar-item w3-button">Link 2</a>
+              <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+            </div> -->
+
+<!-- THE MODAL -->
+
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content loginbox w3-animate-zoom" style="max-width:380px">
+                <header class="w3-container"> 
+                  <span onclick="document.getElementById('id01').style.display='none'" 
+                  class="w3-button w3-display-topright">&times;</span>
+                  <h4 class="w3-center w3-padding-16">Logging in to Saintly</h4>
+                </header>
+                <div class="w3-container">
+                  <div class="modal-facebook w3-center">
+                    <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+                  </div><br>
+                  <div class="modal-google w3-center">
+                    <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+                  </div>
+                  <hr><p class="w3-center font-weight-bold">OR</p><hr>
+                  <form action="home.html">
+                    <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required><br>
+                    <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+                  </form>
+                  <div class="w3-row">
+                    <div class="w3-half">
+                      <input type="checkbox" name="checkbox">  <label for="checkbox">Remember Me</label>
+                    </div>
+                    <div class="w3-rest pl-3">
+                      <a href="#" class="w3-text-cyan forgot" onclick="document.getElementById('id0l4').style.display='block'">Forgot Password?</a>
+                      
+                    </div>
+                  </div><hr>
+                </div>
+                <footer class="w3-container w3-center">
+                  <p>Not a member yet? <a href="#" class="w3-text-light-cyan log">Join now</a></p>
+                </footer>
+              </div>
+
+
+              <div class="w3-modal-content registerbox w3-animate-zoom" style="max-width:380px">
+        
+            <header class="w3-container">
+              <span onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h4 class="w3-center w3-padding-16">Signing up to Saintly</h4>
+            </header>
+        
+            <div class="w3-container">
+              <div class="modal-facebook w3-center">
+                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+              </div><br>
+              <div class="modal-google w3-center">
+                <a href="#"><img src="img/download2-removebg-preview.png" alt=""></i> Continue with Google</a>
+              </div><br>
+              <hr><p class="w3-center font-weight-bold">OR</p><hr>
+              <form action="home.html" method="post">
+                <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+              </form>
+              <div class="w3-row">
+                <div class="w3-rest">
+                  <p>By joining I agree to receive emails from Saintly</p>
+                </div>                      
+              </div>
+            </div>
+        
+            <footer class="w3-container w3-center">
+              <p>Already a member? <a href="#" class="w3-text-cyan reg">back to Sign in</a></p>
+            </footer>
+          </div>
+                   <!-- FORGOT PASSWORD -->
+         <!-- <div class="w3-modal" id="idol4"> -->
+          <div class="container forgotpas w3-modal-content w3-animate-zoom w3-modal" style="max-width:380px; max-height: 320px;">
+            <header class="w3-container"> 
+              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright cls">&times;</span>
+              <h4 class="w3-center w3-padding-16 font-weight-bolder">Reset Passsword</h4>
+            </header>
+            <div class="w3-center">
+             <p>Please enter your email address and we will <br>
+            send you a link to reset your password</p>
+            <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
+            <input type="button" value="Submit" class="form-control w3-dark-cyan"><br>
+          </div><hr>
+          <footer class="w3-container w3-center">
+            <p>Back to <a href="#" class="w3-text-light-cyan log3">Sign in</a></p>
+          </footer>
+        </div>
+      <!-- </div> -->
+        </div>
+
+      <!-- SIGN UP  -->
+            
+        <div id="id02" class="w3-modal">
+          <div class="w3-modal-content registerbo w3-animate-zoom" style="max-width:380px">
+        
+            <header class="w3-container">
+              <span onclick="document.getElementById('id02').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h4 class="w3-center w3-padding-16">Signing up to Saintly</h4>
+            </header>
+        
+            <div class="w3-container">
+              <div class="modal-facebook w3-center">
+                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+              </div><br>
+              <div class="modal-google w3-center">
+                <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+              </div><br>
+              <hr><p class="w3-center font-weight-bold">OR</p><hr>
+              <form action="home.html" method="post">
+                <input type="text" name="text" class="form-control" placeholder="Email / Username"><br>
+                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+              </form>
+              <div class="w3-row">
+                <div class="w3-rest">
+                  <p>By joining I agree to receive emails from Saintly</p>
+                </div>                      
+              </div>
+            </div>
+        
+            <footer class="w3-container w3-center">
+              <p>Already a member? <a href="#" class="w3-text-cyan reg1">back to Sign in</a></p>
+            </footer>
+          </div>
+
+          <div class="w3-modal-content loginbo w3-animate-zoom" style="max-width:380px">
+            <header class="w3-container"> 
+              <span onclick="document.getElementById('id02').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              <h4 class="w3-center w3-padding-16">Logging in to Saintly</h4>
+            </header>
+            <div class="w3-container">
+              <div class="modal-facebook w3-center">
+                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+              </div><br>
+              <div class="modal-google w3-center">
+                <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+              </div>
+              <hr><p class="w3-center font-weight-bold">OR</p><hr>
+              <form action="home.html">
+                <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                <input type="password" name="password" class="form-control" placeholder="Password" required`><br>
+                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+              </form>
+              <div class="w3-row">
+                <div class="w3-half">
+                  <input type="checkbox" name="checkbox">  <label for="checkbox">Remember Me</label>
+                </div>
+                <div class="w3-rest pl-3">
+                  <a href="#" class="w3-text-cyan forgot" onclick="document.getElementById('id0l3').style.display='block'">Forgot Password?</a>
+                  
+                </div>
+              </div><hr>
+            </div>
+            <footer class="w3-container w3-center">
+              <p>Not a member yet? <a href="#" class="w3-text-light-cyan log1">Join now</a></p>
+            </footer>
+          </div>
+                <!-- FORGOT PASSWORD -->
+          <div class="container forgotpas w3-modal-content w3-animate-zoom w3-modal" style="max-width:380px; max-height: 320px;">
+            <header class="w3-container"> 
+              <span onclick="document.getElementById('id02').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              <h4 class="w3-center w3-padding-16 font-weight-bolder">Reset Passsword</h4>
+            </header>
+            <div class="w3-center">
+             <p>Please enter your email address and we will <br>
+            send you a link to reset your password</p>
+            <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
+            <input type="button" value="Submit" class="form-control w3-dark-cyan"><br>
+          </div><hr>
+          <footer class="w3-container w3-center">
+            <p>Back to <a href="#" class="w3-text-light-cyan log2">Sign in</a></p>
+          </footer>
+        </div>
+
+      </div>  
+        </div>
+        <!-- <div class="w3-content search-bar">
+          <input type="search" name="search" id="input" class="form-control" placeholder="Hire Services">
+          <a href="#"><span class="fa fa-search w3-text-grey"></span></a>
+          <button type="submit" class="w3-btn w3-round">Get Started</button>
+        </div><hr>   -->
+      </div>
+    </nav>
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="#home" class="w3-bar-item">Home</a>
+      <a href="#" class="w3-bar-item">Saintly Pro</a>
+      <a href="explore.html" class="w3-bar-item">Explore <i class="fa fa-caret-down"></i></a>
+      <a href="about.html" class="w3-bar-item w3-text-light-cyan">About Saintly</a>
+      <a href="404.html" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
+      <a href="404.html" class="w3-bar-item">Sign in</a>
+    </div>
+    <div id="nav2">
+      <div class="container-fluid bottom-nav">
+        <a href="web.html">Web Development</a>
+        <a href="marketing.html">Digital Marketing</a>
+        <a href="404.html">Programming & Tech</a>
+        <a href="writing.html">Writing & Translation</a>
+        <a href="video.html">Video Editor</a>
+        <a href="graphics.html">Graphics Design</a>
+        <a href="404.html">Music & Audio</a>
+        <a href="404.html">Data Analyst</a>
+        <a href="404.html">Lifestyle</a>
+      </div>
+    </div>
+  </header>
+  <div class="w3-padding-64 term-box container">
+    <div class="w3-card-4 container w3-white w3-padding-24">
+      <h1>ABOUT US</h1><br><br>
+      <!-- <h3><i>FREELANCE</i> MARKET</h3> -->
+      <ul>
+        <img src="img/user-2.png" class="img-fluid rounded-circle profile-pic">
+        <h4>Nzenwata Sinclair</h4><br>
+        <p>Sole Founder & CEO</p>
+      </ul><br>
+      <div class="container">
+        <p>Saintly began over two days ago by pioneering a better way of working, helping businesses to grow, finding more flexibility and connecting talent with more opportunities around the world.</p><br>
+        <p class="para3">Our mission to create economic opportunities so people have better lives has taken us so much further. As a result, we’ve become the world’s work marketplace where every day businesses of all sizes and independent talent from around the globe meet here to accomplish incredible things.</p>
+        <p>Like for so many, Saintly has had a big impact on my life. I first came to this company on the product team and over the years have understood what makes this platform really work: the relationships.</p>
+        <h5>We see what you do</h5>
+        <p>I have personally seen the passion and commitment that every user puts into their work here. Whether it’s a quick powerpoint presentation or a multi-year development project - both talent on Saintly and our clients care about doing really good work because they love what they do. <br>In fact, we designed it that way. Our work marketplace aligns the goals of our clients with the goals of talent on Saintly so that outcomes are better and everyone grows in the same direction. You’ll find tools to develop your skills, evolve your business, and gain the control and freedom you need for success.</p>
+        <h5>Saintly is your workforce</h5>
+        <p>If you’re a client that’s come here to get things done, use this workforce of independent  talent to build faster and transform your business. If you’re independent talent that’s come here to realize your potential, know that you are a valuable and instrumental part of someone’s team.</p>
+        <h5>We make work more rewarding</h5>
+        <p>We see your vision, and everything we do is an effort to help you make the connections that will turn that vision into reality, by building your Virtual Talent Bench of trusted people. <br>The impact is both economic and personal, in the everyday and in the long run. When you find the right people, you stop working to get by and start working strategically. <br> That is when real opportunity emerges. <br>I can say with confidence that the Saintly team - the team that serves you the talent and you the client - is still driven by our mission to create economic opportunity for our people around the world. <br>You’re our people now, and we’re glad that you’re here. <br>We can’t wait to see what you do.</p><br><br>
+        <p>Nzenwata Sinclair</p>
+        <p>Founder CEO</p>
+      </div>
+      <h2 class="w3-xxlarge mt-3">Begin Your Journey</h2>
+      <a href="explore.html" type="button" class="w3-btn w3-light-cyan w3-round-xxlarge btn-lg mt-3 mb-3">Explore</a>
+    </div>
+  </div>
+
+<footer class="footer mt-5">
+  <!-- FOR SMALL SCREEN -->
+<div class="w3-container pt-3 accordion">
+  <div id="accordion" class="pt-2">
+    <a href="#collapseone" class="w3-large w3-text-white" data-toggle="collapse">Categories    <i class="fa fa-caret-down"></i></a>
+    <div id="collapseone" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ul class="">
+          <a href="web.html">Web Development</a>
+          <a href="marketing.html">Digital Marketing</a>
+          <a href="404.html">Programming & Tech</a>
+          <a href="writing.html">Writing & Translation</a>
+          <a href="video.html">Video Editor</a>
+          <a href="graphics.html">Graphics Design</a>
+          <a href="404.html">Music & Audio</a>
+          <a href="404.html">Data Analyst</a>
+          <a href="404.html">Lifestyle</a>
+        </ul>
+      </div>
+    </div>				
+  </div>
+  <div id="accordion" class="pt-2">
+    <a href="#collapsetwo" class="w3-large w3-text-white" data-toggle="collapse">For Clients   <i class="fa fa-caret-down"></i></a>
+    <div id="collapsetwo" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ul class="">
+          <a href="#">How to hire</a><br>
+          <a href="#">Marketplace</a><br>
+          <a href="#">Projects</a><br>
+          <a href="#">Direct Contracts</a><br>
+        </ul>
+      </div>
+    </div>				
+  </div>
+  <div id="accordion" class="pt-2">
+    <a href="#collapsethree" class="w3-large w3-text-white" data-toggle="collapse">Support   <i class="fa fa-caret-down"></i></a>
+    <div id="collapsethree" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ul class="">
+          <a href="#">Help and Support</a><br>
+          <a href="#">Trust and Safety</a><br>
+          <a href="#">Buying on Saintly</a><br>
+          <a href="#">Selling on Saintly</a><br>
+        </ul>
+      </div>
+    </div>				
+  </div>
+  <div id="accordion" class="pt-2">
+    <a href="#collapsefour" class="w3-large w3-text-white" data-toggle="collapse">Company   <i class="fa fa-caret-down"></i></a>
+    <div id="collapsefour" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ul class="">
+          <a href="#">Careers</a><br>
+          <a href="#">Patnerships</a><br>
+          <a href="about.html">About Us</a><br>
+          <a href="#">Privacy Policy</a><br>
+          <a href="terms.html">Terms of Service</a><br>
+        </ul>
+      </div>
+    </div>				
+  </div>
+</div>
+      <!-- FOR LARGE SCREEN -->
+<div class="container fot">
+  <div class="row">
+    <div class="col-lg-3 pt-5">
+      <h4>Categories</h4>
+        <a href="web.html">Web Development</a><br>
+        <a href="marketing.html">Digital Marketing</a><br>
+        <a href="404.html">Programming & Tech</a><br>
+        <a href="writing.html">Writing & Translation</a><br>
+        <a href="video.html">Video Editor</a><br>
+        <a href="graphics.html">Graphics Design</a><br>
+        <a href="404.html">Music & Audio</a><br>
+        <a href="404.html">Data Analyst</a><br>
+        <a href="404.html">Lifestyle</a>
+    </div>
+    <div class="col-lg-3 pt-5">
+      <h4>For Clients</h4>
+      <a href="#">How to hire</a><br>
+      <a href="#">Marketplace</a><br>
+      <a href="#">Projects</a><br>
+      <a href="#">Direct Contracts</a><br>
+    </div>
+    <div class="col-lg-3 pt-5">
+      <h4>Support</h4>
+      <a href="#">Help and Support</a><br>
+      <a href="#">Trust and Safety</a><br>
+      <a href="#">Buying on Saintly</a><br>
+      <a href="#">Selling on Saintly</a><br>
+    </div>
+    <div class="col-lg-3 pt-5">
+      <h4>Company</h4>
+      <a href="#">Careers</a><br>
+      <a href="#">Patnerships</a><br>
+      <a href="about.html">About Us</a><br>
+      <a href="#">Privacy Policy</a><br>
+      <a href="terms.html">Terms of Service</a><br>
+    </div>
+  </div>
+</div><hr>
+<div class="w3-container">
+  <div class="row foote">
+    <div class="col-md-6 col-sm-12">
+      <a href="#"><img src="img/saint2.png" alt="logo" class="img-fluid img" title="Saintly"></a>
+     <!-- <div class="col-sm-12 col-6"> -->
+      <span class="pl-3 w3-text-white w3-mobile"> &copy; Saintly International Ltd.2021</span>
+     <!-- </div> -->
+    </div>
+    <div class="col-md-6 text-right col-sm-12">
+      <ul>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+ 
+  <a href="#home" class="scroll-link top-link">
+		<i class="fas fa-arrow-up"></i>
+	</a>
+</body>
+  <script type="text/javascript" src="dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="dist/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="dist/js/all.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.bundle.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/home.js"></script>
+  <script>
+    $(function () {
+  $(".log").on("click", function (e) {
+    $(".loginbox").css("display", "none");
+    $(".registerbox").css("display", "block");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".reg").on("click", function (e) {
+    $(".loginbox").css("display", "block");
+    $(".registerbox").css("display", "none");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".log1").on("click", function (e) {
+    $(".loginbo").css("display", "none");
+    $(".registerbo").css("display", "block");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".reg1").on("click", function (e) {
+    $(".loginbo").css("display", "block");
+    $(".registerbo").css("display", "none");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".forgot").on("click", function (e) {
+    $(".loginbo").css("display", "none");
+    $(".registerbo").css("display", "none");
+    $(".forgotpas").css("display", "block");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".log2").on("click", function (e) {
+    $(".loginbo").css("display", "block");
+    $(".registerbo").css("display", "none");
+    $(".forgotpas").css("display", "none");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".forgot").on("click", function (e) {
+    $(".loginbox").css("display", "none");
+    $(".registerbox").css("display", "none");
+    $(".forgotpas").css("display", "block");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".log3").on("click", function (e) {
+    $(".loginbox").css("display", "block");
+    $(".registerbox").css("display", "none");
+    $(".forgotpas").css("display", "none");
+    e.preventDefault();
+  });
+});
+
+  </script>
+</html>

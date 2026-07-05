@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard </title>
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/web.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <!-- <link rel="stylesheet" href="css/bulma.css"> -->
+</head>
+
+<body>
+  <header class="header" id="home">
+    <nav id="nav">
+      <div class="wrapper">
+        <div class="navbar w3-bar w3-container">
+          <a href="#"><span class="open-slide fa fa-bars" onclick="openSlideMenu()"></span></a>
+          <div class="logo">
+            <a href="home.html"><img src="img/saint2.png" alt="logo" class="img-fluid img" title="Saintly"></a>
+          </div>
+          <ul class="w3-content wraper">
+            <a href="home.html" class="w3-bar-item">Home</a>
+            <a href="#" class="w3-bar-item">Saintly Pro</a>
+            <a href="explore.html" class="w3-bar-item">Explore</a>
+            <a href="#" class="w3-bar-item">Why Saintly <i class="fa fa-caret-down"></i></a>
+            <a href="#" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
+          </ul>
+          <a href="#" class="w3-bar-item" id="sign-in">Sign in</a>
+          <button class="w3-btn w3-bar-item" id="join">Join</button>
+        </div>
+        <div class="w3-content search-bar">
+          <input type="search" name="search" id="input" class="form-control" placeholder="Hire Services">
+          <a href="#"><span class="fa fa-search w3-text-grey"></span></a>
+          <button type="submit" class="w3-btn w3-round">Get Started</button>
+        </div>
+        <hr>
+      </div>
+    </nav>
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="#home" class="w3-bar-item">Home</a>
+      <a href="#" class="w3-bar-item">Saintly Pro</a>
+      <a href="#" class="w3-bar-item">Explore</a>
+      <a href="#" class="w3-bar-item" onclick="myAccFunc()">Categories <i class="fa fa-caret-down"></i></a>
+      <div id="demoAcc" class="w3-hide">
+        <a href="web.html" class="w3-bar-item">Web Development</a>
+        <a href="marketing.html" class="w3-bar-item">Digital Marketing</a>
+        <a href="#" class="w3-bar-item">Programming & Tech</a>
+        <a href="writing.html" class="w3-bar-item">Writing & Translation</a>
+        <a href="video.html" class="w3-bar-item">Video Editing</a>
+        <a href="graphics.html" class="w3-bar-item">Graphics Design</a>
+        <a href="#" class="w3-bar-item">Music & Audio</a>
+        <a href="#" class="w3-bar-item">Data Analyst</a>
+        <a href="#" class="w3-bar-item">Lifestyle/a>
+      </div>
+      <a href="#" class="w3-bar-item">Why Saintly <i class="fa fa-caret-down"></i></a>
+      <a href="#" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
+      <a href="#" class="w3-bar-item">Sign in</a>
+    </div>
+    <div id="nav2">
+      <div class="container-fluid bottom-nav navbar-dark">
+        <a href="#" onclick="document.getElementById('over').style.color='hsla(182, 63%, 54%)'" id="over">Overview</a>
+        <a href="#abt" onclick="document.getElementById('aot').style.color='hsla(182, 63%, 54%)'" id="aot">About the
+          <i>Freelancer</i></a>
+        <a href="#compare" onclick="document.getElementById('com').style.color='hsla(182, 63%, 54%)'" id="com">Compare
+          Packages</a>
+        <a href="#review" onclick="document.getElementById('rev').style.color='hsla(182, 63%, 54%)'" id="rev">Review</a>
+        <!-- <a href="video.html" class="w3-text-light-cyan">Video Editing</a>
+       <a href="graphics.html">Graphics Design</a>
+       <a href="#">Music & Audio</a>
+       <a href="#">Data Analyst</a>
+       <a href="#">Lifestyle</a> -->
+      </div>
+    </div>
+  </header>
+  <div class="w3-container help">
+    <a href="home.html">SAINTLY <i class="fa fa-caret-right"></i> <a href="web.html" class="web">WEB DEVELOPMENT <i
+          class="fa fa-caret-right"></i></a> <a href="#">FULL WEBSITE <i class="fa fa-caret-right"></i></a></a>
+  </div>
+  <div class="w3-container wrappper">
+    <div class="row">
+      <div class="col-lg-8 box">
+        <h2 class="font-weight-bolder">I will design a responsive website</h2>
+        <ul class="list">
+          <img src="img/user-2.png" alt="profile" class="img-fluid rounded-circle down-pic">
+          <h5>Sinclair</h5> <i class="fa fa-star w3-gold ml-2 mb-1"></i>
+          <p>5.0 (2)</p> <span>Top Rated Seller</span>
+        </ul>
+        <div class="w3-content images" style="max-width:1000px">
+          <img class="Slides" src="img/graphics.jpg" style="width:100%;height:400px;display:none">
+          <img class="Slides" src="img/wb7.jpg" style="width:100%;height:400px;">
+          <img class="Slides" src="img/ws9.jpg" style="width:100%;height:400px;display:none">
+          <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-topmiddle prev-btn"
+            style="width:100%">
+            <button class="w3-left w3-hover-text-khaki prevs" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-right w3-hover-text-khaki nexts" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+          <div class="w3-row-padding w3-section">
+            <div class="w3-col s4">
+              <img class="demoes w3-opacity w3-hover-opacity-off" src="img/web5.jpg" style="width:100%;cursor:pointer"
+                onclick="currentsDiv(1)">
+            </div>
+            <div class="w3-col s4">
+              <img class="demoes w3-opacity w3-hover-opacity-off" src="img/web6.png" style="width:100%;cursor:pointer"
+                onclick="currentsDiv(2)">
+            </div>
+            <div class="w3-col s4">
+              <img class="demoes w3-opacity w3-hover-opacity-off" src="img/web7.png" style="width:100%;cursor:pointer"
+                onclick="currentsDiv(3)">
+            </div>
+          </div>
+        </div>
+        <ul class="mt-5">
+          <h4>What people are saying about this seller</h4><a href="#review">See more reviews...</a>
+        </ul>
+        <div class="w3-row w3-container w3-border review-box">
+          <div class="w3-col s1">
+            <img src="img/r6.png" alt="" class="img-fluid rounded-circle down-pic">
+          </div>
+          <div class="w3-rest rest-box">
+            <ul class="list-box">
+              <h6>Sir Chibuike</h6>
+              <p>Nigeria</p> <i class="fa fa-star w3-gold ml-2 mb-1"></i>
+              <p>5.0</p>
+            </ul>
+            <p> A brilliant person, fantastic designer and good communicator. My 1st Fiverr experience was a pleasure.
+              Thanks to the seller. Brava and thank you. (and the...
+            </p>
+          </div>
+        </div>
+        <div class="w3-container mt-5 gig">
+          <h3>Gig Details</h3>
+          <p class="para">You will get a full responsive website consisting of ( 1, 5, 10 ) pages, depend on the tier
+            you select. You will get a fully responisve website which works great in Desktop, Laptop, Tablet & Mobile
+            Phone.</p><br>
+          <h5>What I need from you:</h5>
+          <ol type="1">
+            <li>Details about your web.</li>
+            <li>Pictures, Videos or any other content, if you don't have any. No problem, I will manage.</li>
+          </ol><br>
+          <h5>The type of websites I work for:</h5>
+          <p class="para w3-sand">E-commerce Stores, Blog & Magazine, Education, Entertainment, Non-profit, Real estate,
+            Retail, Wedding, Portfolio, Services, Music. Legal, Saloon, Gym, Health & Fitness, & All.</p><br>
+          <h5>Contact me before placing an order so that we can discuss your project.</h5>
+          <hr>
+          <div class="w3-row">
+            <div class="w3-third">
+              <h5>Platform</h5>
+              <p class="para">Godaddy</p>
+            </div>
+            <div class="w3-third">
+              <h5>Website Specialization</h5>
+              <p class="para">E-commerce Stores, Blog & Magazine, Education, Entertainment, Non-profit, Real estate,
+                Retail, Wedding, Portfolio, Services, Music. Legal, Saloon, Gym, Health & Fitness, & All.</p>
+            </div>
+            <div class="w3-third">
+              <h5>Supported Plugin Types</h5>
+              <p class="para">Marketing, Payment, Forum, Social Media, Shipping, Inventory, Video, Form, Events, Chat,
+                Gallery</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-container mt-5" id="abt">
+          <h5>About the <i>Freelancer</i></h5>
+          <div class="w3-col s3">
+            <img src="img/user-2.png" alt="" class="img-fluid rounded-circle down-pic1">
+          </div>
+          <div class="w3-rest about-rest">
+            <h6>Sinclair</h6>
+            <p>Time is not the main thing, its the only thing</p>
+            <p><i class="fa fa-star w3-gold"></i> <i class="fa fa-star w3-gold"></i> <i class="fa fa-star w3-gold"></i>
+              <i class="fa fa-star w3-gold"></i> <i class="fa fa-star w3-gold"></i> 5.0 (5)</p>
+            <button type="button" class="w3-button w3-hover-light-cyan w3-border w3-white w3-border-cyan">Contact
+              Me</button>
+          </div><br><br>
+          <div class="w3-border w3-row mb-4">
+            <div class="w3-container">
+              <div class="w3-half w3-padding-16 detail-box">
+                <div class="from w3-large">
+                  <p>From</p>
+                  <h6>Nigeria</h6>
+                </div><br>
+                <div class="from w3-large">
+                  <p>Avg. response time</p>
+                  <h6>1 Day</h6>
+                </div>
+              </div>
+              <div class="w3-half w3-padding-16">
+                <div class="from w3-large">
+                  <p>Member Since</p>
+                  <h6>July 2021</h6>
+                </div><br>
+                <div class="from w3-large">
+                  <p>Last Delivery</p>
+                  <h6>2 Days Ago</h6>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <p class="w3-container w3-large">Hello there ! <br>
+              My name is Sinclair. I am a web designer and web developer. I have 3 months of experience in web
+              development.
+              I work on the programming languages such as HTML5 , CSS3 , JAVASCRIPT , BOOTSTRAP, JQUERY,
+              REACT-JS, PHP and MYSQL. I also work on wordpress and some other cms.</p>
+          </div>
+        </div>
+        <div id="compare">
+          <div class="w3-container mt-5">
+            <h5>Compare Packages</h5>
+            <table class="w3-table w3-striped w3-border w3-large table-bordered w3-centered w3-card-4 mt-4">
+              <tr class="w3-light-cyan">
+                <th class="" style="width: 25%;">Packages</th>
+                <th>Basic ($20)</th>
+                <th>Standard ($50)</th>
+                <th>Premium ($80)</th>
+              </tr>
+              <tr class="w3-white">
+                <td></td>
+                <td>1 page website, color branding, Social media links, Popups, Contact forms and more.</td>
+                <td>4 page website, color branding, Social media links, Popups, Contact forms and more.</td>
+                <td>8 page website, color branding, Social media links, Popups, Contact forms and more.</td>
+              </tr>
+              <tr class="w3-light-grey">
+                <td>Number of pages</td>
+                <td>1</td>
+                <td>4</td>
+                <td>8</td>
+              </tr>
+              <tr class="w3-white">
+                <td>Number of revision</td>
+                <td>3</td>
+                <td>5</td>
+                <td>Unlimited</td>
+              </tr>
+              <tr class="w3-light-grey">
+                <td>Number of Plugins/Extension</td>
+                <td>1</td>
+                <td>2</td>
+                <td>5</td>
+              </tr>
+              <tr class="w3-white">
+                <td>Responsive Design</td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+              </tr>
+              <tr class="w3-light-grey">
+                <td>Content Upload</td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+              </tr>
+              <tr class="w3-white">
+                <td>Design Customization</td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+              </tr>
+              <tr class="w3-light-grey">
+                <td>Delivery</td>
+                <td>3 Days</td>
+                <td>6 Days</td>
+                <td>9 Days</td>
+              </tr>
+              <tr class="w3-white w3-padding-32">
+                <td>Total</td>
+                <td>$20 <br> <button type="submit" class="w3-light-cyan btn w3-block">Select</button></td>
+                <td>$50 <br> <button type="submit" class="w3-light-cyan btn w3-block">Select</button></td>
+                <td>$80 <br> <button type="submit" class="w3-light-cyan btn w3-block">Select</button></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="w3-container mt-5" id="review">
+          <div class="w3-half w3-large review-box1">
+            <h5>15 Reviews <i class="fa fa-star w3-gold"></i><i class="fa fa-star w3-gold"></i><i
+                class="fa fa-star w3-gold"></i><i class="fa fa-star w3-gold"></i><i class="fa fa-star w3-gold"></i> <b
+                class="w3-gold">5</b></h5>
+            <div class="w3-row mt-5">
+              <div class="w3-quarter">
+                <span>5 Stars</span><br>
+                <span class="w3-text-light-gray">4 Stars</span><br>
+                <span class="w3-text-light-gray">3 Stars</span><br>
+                <span class="w3-text-light-gray">2 Stars</span><br>
+                <span class="w3-text-light-gray">1 Star</span>
+              </div>
+              <div class="w3-quarter mt-3">
+                <div class="progress-bar pro1 w3-round w3-light-cyan"></div><br>
+                <div class="progress-bar pro1 w3-round w3-light-gray"></div><br>
+                <div class="progress-bar pro1 w3-round w3-light-gray"></div><br>
+                <div class="progress-bar pro1 w3-round w3-light-gray"></div><br>
+                <div class="progress-bar pro1 w3-round w3-light-gray"></div>
+              </div>
+              <div class="w3-quarter">
+                <i>(15)</i>
+                <i class="w3-text-light-gray">(0)</i>
+                <i class="w3-text-light-gray">(0)</i>
+                <i class="w3-text-light-gray">(0)</i>
+                <i class="w3-text-light-gray">(0)</i>
+              </div>
+            </div>
+          </div>
+          <div class="w3-half review-box2">
+            <h5>Sort By <select>
+                <option>Most Recent</option>
+                <option>Most Relevant</option>
+                <option>Most Critical</option>
+              </select>
+            </h5>
+            <!-- <h6>Rating Breakdown</h6><br>
+            <div class="w3-half breakdown">
+              <h6><i>Freelancer</i> Communication Level</h6>
+            </div>
+            <div class="w3-third">
+              <p>5 <i class="fa fa-star w3-gold"></i></p>
+            </div> -->
+          </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+          <div class="w3-col s1">
+            <img src="img/user-3.png" alt="" class="img-fluid rounded-circle down-pic2">
+          </div>
+          <div class="w3-rest review-box3 mt-4 pl-3">
+            <h6>Joanne Paul <i class="fa fa-star w3-gold ml-2"></i> 5</h6>
+            <p>United States</p>
+            <p>Two (2) websites in a week, both for pretty difficult clients who I assisted with their websites. The
+              seller was patient, extremely thoughtful, creative and absolutely open to the needs of clients. I will be
+              placing my next order with this seller in 2 days time. A brilliant person, fantastic designer and good
+              communicator. My 1st Fiverr experience was a pleasure. Thanks to the seller. Brava and thank you. (and the
+              delivery was EARLY by 3 days!)</p>
+            <p class="w3-text-light-gray font-weight-bold">Published 3 hours ago</p>
+            <ul>
+              <p><i class="fa fa-thumbs-up w3-hover-text-light-cyan"></i>Helpful</p>
+              <p><i class="fa fa-thumbs-down w3-hover-text-light-cyan"></i>Not Helpful</p>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+          <div class="w3-col s1">
+            <img src="img/user-1.png" alt="" class="img-fluid rounded-circle down-pic2">
+          </div>
+          <div class="w3-rest review-box3 mt-4 pl-3">
+            <h6>Kim Jong <i class="fa fa-star w3-gold ml-2"></i> 5</h6>
+            <p>South Korea</p>
+            <p>This seller is very knowledgeable and responsive. He is very helpful and was willing to assist with any
+              concerns I've had. Very patient and kind. I definitely plan to work with him again.</p>
+            <p class="w3-text-light-gray font-weight-bold">Published 3 hours ago</p>
+            <ul>
+              <p><i class="fa fa-thumbs-up w3-hover-text-light-cyan"></i>Helpful</p>
+              <p><i class="fa fa-thumbs-down w3-hover-text-light-cyan"></i>Not Helpful</p>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+          <div class="w3-col s1">
+            <img src="img/r6.png" alt="" class="img-fluid rounded-circle down-pic2">
+          </div>
+          <div class="w3-rest review-box3 mt-4 pl-3">
+            <h6>Sir Chibuike <i class="fa fa-star w3-gold ml-2"></i> 5</h6>
+            <p>Nigeria</p>
+            <p>I strongly recommend this wonderful developer to any one who wants amazing website. He is very creative,
+              considerate, prompt and intelligent. I will definitely higher him for more jobs.</p>
+            <p class="w3-text-light-gray font-weight-bold">Published 5 hours ago</p>
+            <ul>
+              <p><i class="fa fa-thumbs-up w3-hover-text-light-cyan"></i>Helpful</p>
+              <p><i class="fa fa-thumbs-down w3-hover-text-light-cyan"></i>Not Helpful</p>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-container">
+          <div class="w3-col s1">
+            <img src="img/luffy.jpg" alt="" class="img-fluid rounded-circle down-pic2">
+          </div>
+          <div class="w3-rest review-box3 mt-4 pl-3">
+            <h6>Monkey D. Luffy <i class="fa fa-star w3-gold ml-2"></i> 5</h6>
+            <p>Japan</p>
+            <p>Just amazing guy He knows his job really well!! HIGHLY RECOMMENDED</p>
+            <p class="w3-text-light-gray font-weight-bold">Published 9 hours ago</p>
+            <ul>
+              <p><i class="fa fa-thumbs-up w3-hover-text-light-cyan"></i>Helpful</p>
+              <p><i class="fa fa-thumbs-down w3-hover-text-light-cyan"></i>Not Helpful</p>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-container review-box4">
+          <h5>Related Tags</h5>
+          <ul class="mt-5">
+            <button class="btn btn-md">Php Developer</button>
+            <button class="btn btn-md">Wordpress Developer</button>
+            <button class="btn btn-md">Web Designer</button>
+            <button class="btn btn-md">Bugs</button>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-5 ">
+        <div class="w3-card-4 tab-box">
+          <ul class="nav nav-tabs tab">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="pill" href="#basic">Basic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu1">Standard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="pill" href="#menu2">Premium</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content mt-4">
+            <div class="tab-pane container active tab-card" id="basic">
+              <h4>Basic <span class="w3-right">$20</span></h4>
+              <p class="w3-container mt-4">1 page website, color branding, Social media links, Popups, Contact forms and
+                more.</p>
+              <div class="attributes">
+                <p><i class="fa fa-check"></i> 1 Page</p>
+                <p><i class="fa fa-check"></i> Responsive Design</p>
+                <p><i class="fa fa-check"></i> Content Upload</p>
+                <p><i class="fa fa-check"></i> 3 Revision</p>
+                <p><i class="fa fa-check"></i> 1 Plugins/Extension</p>
+                <p><i class="fa fa-check"></i> Design Customization</p>
+                <p><i class="fa fa-clock"></i> 3 Days Delivery</p>
+                <button type="button" class="btn mt-3 btn-lg btn-block">Continue ($20)</button>
+                <a href="#compare" class="text-center compare">Compare these packages</a>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="menu1">
+              <h4>Standard <span class="w3-right">$50</span></h4>
+              <p class="w3-container mt-4">4 page website, color branding, Social media links, Popups, Contact forms and
+                more.</p>
+              <div class="attributes">
+                <p><i class="fa fa-check"></i> 4 Page</p>
+                <p><i class="fa fa-check"></i> Responsive Design</p>
+                <p><i class="fa fa-check"></i> Content Upload</p>
+                <p><i class="fa fa-check"></i> 5 Revision</p>
+                <p><i class="fa fa-check"></i> 2 Plugins/Extension</p>
+                <p><i class="fa fa-check"></i> Design Customization</p>
+                <p><i class="fa fa-clock"></i> 6 Days Delivery</p>
+                <button type="button" class="btn mt-3 btn-lg btn-block">Continue ($50)</button>
+                <a href="#compare" class="text-center compare">Compare these packages</a>
+              </div>
+            </div>
+            <div class="tab-pane container fade" id="menu2">
+              <h4>Premium <span class="w3-right">$80</span></h4>
+              <p class="w3-container mt-4">8 page website, color branding, Social media links, Popups, Contact forms and
+                more.</p>
+              <div class="attributes">
+                <p><i class="fa fa-check"></i> 8 Page</p>
+                <p><i class="fa fa-check"></i> Responsive Design</p>
+                <p><i class="fa fa-check"></i> Content Upload</p>
+                <p><i class="fa fa-check"></i> Unlimited Revision</p>
+                <p><i class="fa fa-check"></i> 5 Plugins/Extension</p>
+                <p><i class="fa fa-check"></i> Design Customization</p>
+                <p><i class="fa fa-clock"></i> 9 Days Delivery</p>
+                <button type="button" class="btn mt-3 btn-lg btn-block">Continue ($80)</button>
+                <a href="#compare" class="text-center compare">Compare these packages</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container forgotpas">
+    <div class="w3-center">
+     <p>Please enter your email address and we will <br>
+    send you a link to reset your password</p>
+    <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
+    <input type="button" value="Submit" class="form-control w3-green"><br>
+  </div> -->
+
+
+
+  <footer class="footer mt-5">
+    <!-- FOR SMALL SCREEN -->
+    <div class="w3-container pt-3 accordion">
+      <div id="accordion" class="pt-2">
+        <a href="#collapseone" class="w3-large w3-text-white" data-toggle="collapse">Categories <i
+            class="fa fa-caret-down"></i></a>
+        <div id="collapseone" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="">
+              <a href="#">Web Development</a><br>
+              <a href="#">Digital Marketing</a><br>
+              <a href="#">App Development</a><br>
+              <a href="#">SEO Expert</a><br>
+              <a href="#">Video Editor</a><br>
+              <a href="#">Graphics Design</a><br>
+              <a href="#">Software Development</a><br>
+              <a href="#">Data Analyst</a><br>
+              <a href="#">UI Designing</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="accordion" class="pt-2">
+        <a href="#collapsetwo" class="w3-large w3-text-white" data-toggle="collapse">For Clients <i
+            class="fa fa-caret-down"></i></a>
+        <div id="collapsetwo" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="">
+              <a href="#">How to hire</a><br>
+              <a href="#">Marketplace</a><br>
+              <a href="#">Projects</a><br>
+              <a href="#">Direct Contracts</a><br>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="accordion" class="pt-2">
+        <a href="#collapsethree" class="w3-large w3-text-white" data-toggle="collapse">Support <i
+            class="fa fa-caret-down"></i></a>
+        <div id="collapsethree" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="">
+              <a href="#">Help and Support</a><br>
+              <a href="#">Trust and Safety</a><br>
+              <a href="#">Buying on Saintly</a><br>
+              <a href="#">Selling on Saintly</a><br>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="accordion" class="pt-2">
+        <a href="#collapsefour" class="w3-large w3-text-white" data-toggle="collapse">Company <i
+            class="fa fa-caret-down"></i></a>
+        <div id="collapsefour" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="">
+              <a href="#">Careers</a><br>
+              <a href="#">Patnerships</a><br>
+              <a href="#">About Us</a><br>
+              <a href="#">Privacy Policy</a><br>
+              <a href="#">Terms of Service</a><br>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOR LARGE SCREEN -->
+    <div class="container fot">
+      <div class="row">
+        <div class="col-lg-3 pt-5">
+          <h4>Categories</h4>
+          <a href="#">Web Development</a><br>
+          <a href="#">Digital Marketing</a><br>
+          <a href="#">App Development</a><br>
+          <a href="#">SEO Expert</a><br>
+          <a href="#">Video Editor</a><br>
+          <a href="#">Graphics Design</a><br>
+          <a href="#">Software Development</a><br>
+          <a href="#">Data Analyst</a><br>
+          <a href="#">UI Designing</a>
+        </div>
+        <div class="col-lg-3 pt-5">
+          <h4>For Clients</h4>
+          <a href="#">How to hire</a><br>
+          <a href="#">Marketplace</a><br>
+          <a href="#">Projects</a><br>
+          <a href="#">Direct Contracts</a><br>
+        </div>
+        <div class="col-lg-3 pt-5">
+          <h4>Support</h4>
+          <a href="#">Help and Support</a><br>
+          <a href="#">Trust and Safety</a><br>
+          <a href="#">Buying on Saintly</a><br>
+          <a href="#">Selling on Saintly</a><br>
+        </div>
+        <div class="col-lg-3 pt-5">
+          <h4>Company</h4>
+          <a href="#">Careers</a><br>
+          <a href="#">Patnerships</a><br>
+          <a href="#">About Us</a><br>
+          <a href="#">Privacy Policy</a><br>
+          <a href="#">Terms of Service</a><br>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="w3-container">
+      <div class="row foote">
+        <div class="col-md-6 col-sm-12">
+          <a href="#"><img src="img/saint2.png" alt="logo" class="img-fluid img" title="Saintly"></a>
+          <!-- <div class="col-sm-12 col-6"> -->
+          <span class="pl-3 w3-text-white w3-mobile"> &copy; Saintly International Ltd.2021</span>
+          <!-- </div> -->
+        </div>
+        <div class="col-md-6 text-right col-sm-12">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#">Mobile App <i class="fab fa-apple"></i> <i class="fab fa-android"></i></a></i>                -->
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#home" class="scroll-link top-link">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</body>
+<script type="text/javascript" src="/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="dist/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="dist/js/all.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap.bundle.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap.bundle.min.js"></script>
+<!-- <script type="text/javascript" src="/js/home.js"></script> -->
+<script type="text/javascript" src="/js/video.js"></script>
+<script>
+  function openSlideMenu() {
+    document.getElementById('side-menu').style.width = '250px';
+    document.getElementById('main').style.marginLeft = '250px';
+
+  }
+
+  function closeSlideMenu() {
+    document.getElementById('side-menu').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
+  }
+
+  const navbar = document.getElementById("nav");
+  const navbar2 = document.getElementById("nav2");
+  const topLink = document.querySelector(".top-link");
+
+  window.addEventListener("scroll", function () {
+    const scrollHeight = window.pageYOffset;
+    const navHeight = navbar.getBoundingClientRect().height;
+    // if (scrollHeight > navHeight) {
+    //   navbar.classList.add("fixed-nav");
+    // } else {
+    //   navbar.classList.remove("fixed-nav");
+    // }
+    if (scrollHeight > navHeight) {
+      navbar2.classList.add("fixed-nav2");
+    } else {
+      navbar2.classList.remove("fixed-nav2");
+    }
+    // setup back to top link
+
+    if (scrollHeight > 500) {
+      // console.log("helo");
+
+      topLink.classList.add("show-link");
+    } else {
+      topLink.classList.remove("show-link");
+    }
+  });
+
+  function currentsDiv(n) {
+    showsDivs(slideIndex = n);
+  }
+
+  function plusDivs(n) {
+    showsDivs(slideIndex += n);
+  }
+
+  function showsDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("Slides");
+    var dots = document.getElementsByClassName("demoes");
+    if (n > x.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+      slideIndex = x.length
+    }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+    }
+    x[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " w3-opacity-off";
+  }
+</script>
+
+</html>

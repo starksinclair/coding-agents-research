@@ -1,0 +1,339 @@
+.header {
+  background-color: #fff;
+  height: 100px;
+}
+.navbar {
+  padding: 5px;
+}
+.navbar a {
+  color: black;
+}
+#join {
+  color: black;
+  border: 2px solid var(--clr-secondary);
+}
+#join:hover {
+  background-color: var(--clr-secondary);
+  color: white;
+}
+.help a,
+.web {
+  color: #595959;
+  font-size: 15px;
+  font-weight: bolder;
+}
+.help a:hover {
+  color: #007180;
+}
+.help {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.fa-caret-right {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.search-bar {
+  position: relative;
+}
+.search-bar button {
+  background-color: var(--clr-secondary);
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 610px;
+  outline: #007180;
+}
+.fa-search {
+  position: absolute;
+  top: 10px;
+  left: 225px;
+}
+#input {
+  width: 40%;
+  margin-left: 220px;
+  margin-top: -20px;
+}
+.wrape {
+  background-color: #fdf5e6;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 120px;
+}
+.wrape a,
+.avail p {
+  color: #595959;
+  font-weight: bold;
+  font-size: 17px;
+}
+.wrape a:hover {
+  color: #007180;
+}
+.option a {
+  color: #333;
+  font-weight: bold;
+  font-size: 17px;
+  margin: 5px;
+  outline: none;
+}
+.checkbox {
+  margin-top: 5px;
+  width: 400px;
+  z-index: 100;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.checkbox button,
+.services button,
+.bud button {
+  margin-bottom: 12px;
+}
+#ch {
+  margin: 15px;
+}
+.option span {
+  color: #333;
+  font-size: 17px;
+  font-weight: bold;
+}
+.seller-details {
+  overflow-y: scroll;
+  overflow-x: auto;
+  margin-top: 5px;
+  width: 500px;
+  z-index: 100;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 350px;
+}
+.seller-details b,
+.services b {
+  color: #999;
+  font-weight: 700;
+}
+.seller-details P {
+  cursor: pointer;
+}
+.bud {
+  width: 300px;
+  z-index: 100;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-top: 5px;
+}
+.fa-dollar-sign {
+  color: #999;
+}
+.sees,
+.see {
+  margin-top: -60px;
+}
+.services {
+  overflow-y: scroll;
+  overflow-x: auto;
+  margin-top: 5px;
+  width: 600px;
+  z-index: 100;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  height: 300px;
+}
+.cle {
+  background-color: white;
+  padding: 20px;
+  position: sticky;
+}
+select {
+  border: 1px solid #ff523b;
+  padding: 5px;
+}
+.holder {
+  border: 1px solid #f2f2f2;
+  height: 430px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  margin-left: 20px;
+  padding: 0;
+  margin-bottom: 25pt;
+  max-width: 800px;
+  max-height: 500px;
+  position: relative;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: transform 0.5s ease;
+}
+.holder:hover {
+  transform: translateY(-10px);
+}
+.pic {
+  padding: 0;
+  width: 100%;
+  height: 230px;
+  max-width: 100%;
+  max-height: 230px;
+}
+.down-pic {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.holder h5 {
+  padding-left: 50pt;
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 19px;
+}
+.holder small {
+  padding-left: 50pt;
+  margin-top: -10px;
+  color: #595959;
+  font-size: 15px;
+}
+.holder p {
+  padding-left: 10px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin-top: 15px;
+  /* margin-bottom: -5px; */
+}
+
+.fa-heart {
+  font-size: 30px;
+  margin-left: 10px;
+  margin-top: -5px;
+  margin-bottom: 15px;
+  /* padding: 10px; */
+}
+.holder h6 {
+  color: #595959;
+  margin-top: -38px;
+  margin-right: 10px;
+  text-align: right;
+}
+.holder strong {
+  color: #333;
+  font-size: 18px;
+}
+
+/* SLIDESHOW */
+.mySlides1,
+.mySlide,
+.mySlides3,
+.mySlide1,
+.mySlide2,
+.Myslid {
+  display: none;
+}
+
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+}
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+  background-color: transparent;
+}
+.next {
+  margin-top: -90px;
+  border: 1px solid white;
+  padding-right: 15px;
+  padding-left: 10px;
+  border-radius: 40px;
+  background-color: white;
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 93%;
+}
+.prev {
+  margin-top: -90px;
+  border: 1px solid white;
+  padding-right: 10px;
+  padding-left: 15px;
+  border-radius: 40px;
+  background-color: white;
+  color: #000;
+  position: absolute;
+  top: 0;
+  right: 93%;
+}
+.holder button {
+  outline: none;
+  display: none;
+  transition: 0.5s;
+}
+.holder:hover .prev {
+  display: block;
+}
+.holder:hover .next {
+  display: block;
+}
+.holder:hover p {
+  color: #007180;
+}
+.modal-facebook a {
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .fixed-nav2 {
+    position: fixed;
+    top: 14.5%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .search-bar button {
+    display: none;
+  }
+  .fa-search {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+  }
+  #input {
+    width: 90%;
+    margin-left: 20px;
+    margin-top: 0px;
+  }
+  .help a {
+    font-size: 15px;
+  }
+  .heads h2 {
+    font-weight: 600;
+  }
+  .wrape {
+    padding-top: 20px;
+    height: 260px;
+  }
+  .wrape a,
+  .avail p {
+    font-size: 18px;
+  }
+  .option a {
+    color: #333;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 5px;
+    outline: none;
+  }
+  .services {
+    width: 390px;
+  }
+  .seller,
+  .delivery,
+  .service,
+  .budget {
+    width: 209px;
+  }
+  .w3-col.l2 {
+    width: 90.66666%;
+  }
+  .holder {
+    height: 450px;
+  }
+  .footer {
+    height: 290px;
+  }
+}
+
+/* EXPLORE.HTML */

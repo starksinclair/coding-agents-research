@@ -1,0 +1,123 @@
+
+<style>
+  .tree { font-family: var(--font-mono); font-size: 13px; line-height: 1.9; color: var(--color-text-primary); padding: 1rem 0; }
+  .folder { color: var(--color-text-primary); font-weight: 500; }
+  .file { color: var(--color-text-secondary); }
+  .comment { color: var(--color-text-tertiary); font-size: 11px; margin-left: 8px; font-family: var(--font-sans); }
+  .pipe { color: var(--color-text-tertiary); }
+  .row { display: flex; align-items: baseline; }
+  .i1 { padding-left: 20px; }
+  .i2 { padding-left: 40px; }
+  .i3 { padding-left: 60px; }
+  .i4 { padding-left: 80px; }
+  .i5 { padding-left: 100px; }
+  .gap { margin-top: 4px; }
+  .badge { font-family: var(--font-sans); font-size: 10px; font-weight: 500; padding: 1px 7px; border-radius: 99px; margin-left: 8px; }
+  .b-warn  { background: #FAEEDA; color: #854F0B; }
+  .b-green { background: #EAF3DE; color: #3B6D11; }
+  .b-blue  { background: #E6F1FB; color: #0C447C; }
+  .b-purple{ background: #EEEDFE; color: #3C3489; }
+</style>
+<div class="tree">
+
+  <div class="row"><span class="folder">coding-agents-research/</span></div>
+
+  <div class="i1 gap">
+    <div class="row"><span class="pipe">├── </span><span class="folder">codebase/</span><span class="comment">clean snapshot of portfolio project — never edited directly</span></div>
+    <div class="i2">
+      <div class="row"><span class="pipe">└── </span><span class="file">[existing portfolio files]</span></div>
+    </div>
+  </div>
+
+  <div class="i1 gap">
+    <div class="row"><span class="pipe">├── </span><span class="folder">tasks/</span></div>
+
+    <div class="i2">
+      <div class="row"><span class="pipe">├── </span><span class="folder">real-world/</span></div>
+      <div class="i3">
+        <div class="row"><span class="pipe">├── </span><span class="folder">RW-01-slideindex-conflict/</span></div>
+        <div class="i4">
+          <div class="row"><span class="pipe">├── </span><span class="file">task.md</span><span class="comment">description, constraints, success criteria</span></div>
+          <div class="row"><span class="pipe">└── </span><span class="folder">tests/</span><span class="badge b-warn">written on main before any experiment</span></div>
+          <div class="i5">
+            <div class="row"><span class="pipe">├── </span><span class="file">behavioral.test.js</span></div>
+            <div class="row"><span class="pipe">└── </span><span class="file">regression.test.js</span></div>
+          </div>
+        </div>
+        <div class="row"><span class="pipe">├── </span><span class="folder">RW-02-bootstrap-load-order/</span></div>
+        <div class="row"><span class="pipe">├── </span><span class="folder">RW-03-forgot-password-handler/</span></div>
+        <div class="row"><span class="pipe">├── </span><span class="folder">RW-04-footer-height/</span></div>
+        <div class="row"><span class="pipe">├── </span><span class="folder">RW-05-carousel-crash/</span></div>
+        <div class="row"><span class="pipe">├── </span><span class="folder">RW-06-form-validation/</span></div>
+        <div class="row"><span class="pipe">├── </span><span class="folder">RW-07-carousel-refactor/</span></div>
+        <div class="row"><span class="pipe">└── </span><span class="folder">RW-08-modal-extraction/</span></div>
+      </div>
+    </div>
+
+    <div class="i2 gap">
+      <div class="row"><span class="pipe">└── </span><span class="folder">livecodebench/</span></div>
+      <div class="i3">
+        <div class="row"><span class="pipe">├── </span><span class="folder">easy/</span></div>
+        <div class="i4">
+          <div class="row"><span class="pipe">├── </span><span class="folder">LCB-E01-array-manipulation/</span></div>
+          <div class="i5">
+            <div class="row"><span class="pipe">├── </span><span class="file">task.md</span></div>
+            <div class="row"><span class="pipe">└── </span><span class="file">tests/solution.test.js</span></div>
+          </div>
+          <div class="row"><span class="pipe">├── </span><span class="folder">LCB-E02-string-processing/</span></div>
+          <div class="row"><span class="pipe">├── </span><span class="folder">LCB-E03-hashmap-lookup/</span></div>
+          <div class="row"><span class="pipe">├── </span><span class="folder">LCB-E04-state-simulation/</span></div>
+          <div class="row"><span class="pipe">└── </span><span class="folder">LCB-E05-math-counting/</span></div>
+        </div>
+        <div class="row"><span class="pipe">├── </span><span class="folder">medium/</span></div>
+        <div class="i4">
+          <div class="row"><span class="pipe">└── </span><span class="file">LCB-M01 through LCB-M07/ (same structure)</span></div>
+        </div>
+        <div class="row"><span class="pipe">└── </span><span class="folder">hard/</span></div>
+        <div class="i4">
+          <div class="row"><span class="pipe">└── </span><span class="file">LCB-H01 through LCB-H03/ (same structure)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i1 gap">
+    <div class="row"><span class="pipe">├── </span><span class="folder">prompts/</span><span class="badge b-warn">finalized before any experiment runs</span></div>
+    <div class="i2">
+      <div class="row"><span class="pipe">├── </span><span class="file">minimum-context.md</span></div>
+      <div class="row"><span class="pipe">├── </span><span class="file">full-context.md</span></div>
+      <div class="row"><span class="pipe">└── </span><span class="file">structured.md</span></div>
+    </div>
+  </div>
+
+  <div class="i1 gap">
+    <div class="row"><span class="pipe">├── </span><span class="folder">results/</span><span class="badge b-green">tracked on main</span></div>
+    <div class="i2">
+      <div class="row"><span class="pipe">└── </span><span class="file">results.csv</span><span class="comment">task_id · tool · attempt · context_level · iterations · correctness · regression · constraints · success · failure_type · notes</span></div>
+    </div>
+  </div>
+
+  <div class="i1 gap">
+    <div class="row"><span class="pipe">├── </span><span class="folder">scripts/</span></div>
+    <div class="i2">
+      <div class="row"><span class="pipe">├── </span><span class="file">new-attempt.sh</span><span class="comment">branches off main, names the branch correctly</span></div>
+      <div class="row"><span class="pipe">└── </span><span class="file">log-result.sh</span><span class="comment">appends a row to results.csv on main</span></div>
+    </div>
+  </div>
+
+  <div class="i1 gap">
+    <div class="row"><span class="pipe">├── </span><span class="file">README.md</span><span class="badge b-blue">study design</span></div>
+    <div class="row"><span class="pipe">├── </span><span class="file">PROTOCOL.md</span><span class="comment">exact steps for running each experiment</span></div>
+    <div class="row"><span class="pipe">└── </span><span class="file">.gitignore</span></div>
+  </div>
+
+  <div class="gap" style="margin-top:16px; padding-top:12px; border-top: 0.5px solid var(--color-border-tertiary);">
+    <div style="font-family: var(--font-sans); font-size: 12px; color: var(--color-text-secondary); margin-bottom: 6px;">Git branch strategy</div>
+    <div class="row"><span class="pipe" style="font-family:var(--font-mono)">main</span><span class="comment">── clean baseline · codebase · tasks · tests · prompts · results.csv</span></div>
+    <div class="i1"><div class="row"><span class="pipe" style="font-family:var(--font-mono)">├── experiments/claude-code/RW-01-attempt-1</span></div></div>
+    <div class="i1"><div class="row"><span class="pipe" style="font-family:var(--font-mono)">├── experiments/claude-code/RW-02-attempt-1</span></div></div>
+    <div class="i1"><div class="row"><span class="pipe" style="font-family:var(--font-mono)">├── experiments/cursor/RW-01-attempt-1</span></div></div>
+    <div class="i1"><div class="row"><span class="pipe" style="font-family:var(--font-mono)">└── experiments/cursor/RW-02-attempt-1</span></div></div>
+  </div>
+
+</div>

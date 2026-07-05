@@ -1,0 +1,388 @@
+.bottom-nav a {
+  text-decoration: none;
+}
+.bottom-nav a:hover {
+  color: hsla(182, 63%, 54%);
+  transition: 0.5s ease;
+  border-bottom: 3px solid hsla(182, 63%, 54%);
+  padding: 5px;
+}
+.bt-nav {
+  color: hsla(182, 63%, 54%);
+  transition: 0.5s ease;
+  border-bottom: 3px solid hsla(182, 63%, 54%);
+  padding: 5px;
+}
+
+/* .bottom-nav a:active {
+  border-bottom: 3px solid hsla(182, 63%, 54%);
+  padding: 5px;
+  color: rebeccapurple;
+} */
+.wrappper {
+  margin-top: 20px;
+  /* margin-bottom: 550pt; */
+}
+.tab-box {
+  position: sticky;
+  top: 10%;
+  /* z-index: 1000; */
+}
+.tab a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--clr-secondary);
+  padding: 20px 35.2px 20px 20px;
+  /* background-color: #d5e1df; */
+}
+.tab li:hover {
+  color: #007180;
+}
+.tab li:active {
+  transition: 0s ease;
+  border-bottom: 2px solid var(--clr-secondary);
+}
+.tab-content h4 {
+  font-size: 18px;
+  font-weight: bolder;
+  color: #333;
+}
+.tab-content p {
+  font-size: 16px;
+  color: #555;
+}
+.tab-content button {
+  background-color: var(--clr-secondary);
+  color: white;
+}
+.fa-check {
+  color: var(--clr-secondary);
+}
+.fa-clock {
+  color: var(--clr-secondary);
+  background-color: white;
+}
+.attributes {
+  padding-bottom: 20px;
+}
+.attributes a {
+  text-align: center;
+  padding-left: 100px;
+  margin-top: 10px;
+  font-size: 18px;
+  color: var(--clr-secondary);
+}
+.buttom-bar {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  width: 100%;
+}
+.buttom-bar a {
+  padding-left: 10px;
+  color: #595959;
+  font-size: 16px;
+  font-weight: bold;
+}
+.box ul {
+  display: flex;
+}
+.box ul img {
+  margin-left: -30px;
+}
+.box ul h5 {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.box ul span {
+  padding-top: 20px;
+  padding-left: 50px;
+  font-variant: small-caps;
+  font-size: 17px;
+}
+.fa-star {
+  margin-top: 25px;
+  position: relative;
+  left: 48px;
+}
+.list p {
+  padding-top: 21px;
+  padding-left: 50px;
+}
+.prev-btn {
+  position: relative;
+}
+.nexts {
+  margin-top: 20px;
+  border: 1px solid white;
+  padding-right: 15px;
+  padding-left: 10px;
+  border-radius: 40px;
+  background-color: white;
+  color: #000;
+  position: absolute;
+  bottom: 190px;
+  left: 98%;
+  outline: none;
+}
+.prevs {
+  margin-top: 20px;
+  border: 1px solid white;
+  padding-right: 10px;
+  padding-left: 15px;
+  border-radius: 40px;
+  background-color: white;
+  color: #000;
+  position: absolute;
+  bottom: 190px;
+  right: 98%;
+  outline: none;
+}
+.prev-btn button {
+  outline: none;
+  display: none;
+  transition: 0.5s;
+}
+.images:hover .prevs {
+  display: block;
+}
+.images:hover .nexts {
+  display: block;
+}
+.box ul a {
+  padding-left: 200px;
+  padding-top: 5px;
+}
+.review-box {
+  width: 90%;
+  margin-left: 40px;
+}
+.list-box h6 {
+  margin-left: -20px;
+  padding-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+.list-box p {
+  padding-top: 28px;
+  margin-left: 30px;
+  font-size: 15px;
+  color: #555;
+  font-weight: bold;
+}
+.list-box .fa-star {
+  margin-top: 13px;
+  position: relative;
+  left: 45px;
+}
+.rest-box p {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 20px;
+  margin-top: -20px;
+}
+.para,
+.gig li {
+  font-size: 17px;
+  /* font-weight: 700; */
+  color: #333;
+}
+.down-pic1 {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+.about-rest h6 {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+  padding-top: 25px;
+}
+.about-rest .fa-star,
+.review-box1 .fa-star,
+.review-box3 .fa-star {
+  margin-top: 0px;
+  position: relative;
+  left: 0px;
+}
+.from {
+  line-height: 0px;
+}
+.review-box1 .fa-star {
+  font-size: 17px;
+}
+.review-box1 b {
+  font-size: 20px;
+}
+.review-box1 h5 {
+  font-size: 3ex;
+  margin-top: 30px;
+}
+.review-box2 h5 {
+  margin-top: 35px;
+  margin-left: 150px;
+}
+.review-box2 h5 select {
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+.review-box2 h6 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 38px;
+  margin-left: 20px;
+}
+.breakdown h6 {
+  font-size: 12px;
+  margin-top: 0;
+  font-weight: 700;
+}
+.pro1 {
+  width: 250%;
+  height: 7px;
+  position: relative;
+  left: -10px;
+}
+.w3-quarter span {
+  font-weight: bold;
+  color: #000;
+  line-height: 34px;
+}
+.w3-quarter i {
+  text-decoration: none;
+  text-decoration-style: none;
+  padding-left: 160px;
+  color: black;
+  line-height: 34px;
+}
+.down-pic2 {
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+.review-box3 ul {
+  display: flex;
+  position: relative;
+  left: -55px;
+}
+.review-box3 ul p {
+  padding-left: 20px;
+}
+.fa-thumbs-up,
+.fa-thumbs-down {
+  background-color: white;
+  color: gray;
+  margin-right: 5px;
+}
+.review-box4 ul button {
+  display: flex;
+  margin-right: 10px;
+}
+.modal-facebook a {
+  color: #fff;
+}
+.Slides {
+  object-fit: cover;
+}
+.next {
+  border: 1px solid #fdf5e6;
+  background-color: #fdf5e6;
+  position: absolute;
+  top: 0;
+  left: 94%;
+}
+.prev {
+  border: 1px solid #fdf5e6;
+  background-color: #fdf5e6;
+  position: absolute;
+  top: 0;
+  right: 94%;
+}
+
+@media all and (min-width: 992px) {
+  .fixed-nav2 {
+    position: fixed;
+    top: 0;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .tab-box {
+    position: static;
+  }
+  .tab {
+    display: flex;
+    /* margin-top: 75%; */
+    /* margin-left: -40%; */
+  }
+  .tab a {
+    font-size: 15px;
+    font-weight: bold;
+    /* padding: 20px; */
+    /* margin-left: -90px; */
+
+    /* background-color: #d5e1df; */
+  }
+  .about-rest h6,
+  .about-rest button,
+  .about-rest p {
+    margin-top: 0px;
+    position: relative;
+    left: 20px;
+  }
+  .modal-facebook a {
+    color: #fff;
+  }
+
+  #review {
+    display: none;
+  }
+  .review-sm ul {
+    display: flex;
+    margin-left: -40px;
+  }
+  .review-sm h5 {
+    font-size: 18px;
+    margin-left: -20px;
+  }
+  .review-sm b {
+    font-size: 17px;
+  }
+  .review-sm .fa-star {
+    font-size: 14px;
+    position: relative;
+    left: 5px;
+  }
+  .review-sm ul h4 {
+    font-size: 14px;
+    margin-left: 42px;
+    margin-top: 34px;
+  }
+  .review-sm ul h4 select {
+    border: none;
+  }
+  .pro2 {
+    width: 200%;
+    height: 7px;
+    position: relative;
+    left: 0px;
+    margin-left: -10px;
+  }
+  .span-sm {
+    margin-left: -100px;
+    line-height: 29px;
+  }
+  .num-sm {
+    margin-left: 80px;
+    line-height: 29px;
+  }
+  .footer {
+    height: 290px;
+  }
+}
+
+/* PROFILE */

@@ -1,0 +1,127 @@
+#id{
+    padding-right: 40px;
+    padding-top: 5px;
+}
+.icon1{
+    padding-right: 60px;
+    color: black; 
+    font-size: 20px;  
+}
+.icon2{
+    padding-right: 40px;
+    color: black;  
+    font-size: 20px; 
+}
+.icon3{
+    /* padding-right: 60px; */
+    color: black;  
+    font-size: 20px; 
+}
+#id a:hover{
+    color: grey;
+}
+.navbar-brand{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+}
+.navbar-brand:hover{
+       color: grey;
+}
+.btn{
+    border-radius: 45%;
+    margin-left: 5px;
+    height: 40px;
+    width: 45px;
+    background-color: black;
+}
+.form input{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+}
+.fa-search{
+    color: white;
+    font-size: 15px;
+}
+.navbar-nav li a{
+    font-size: 13px;
+    color: black;
+}
+.navbar-nav li a:hover{
+    color: grey;
+}
+.first{
+    height: 400px;
+    background-color: beige;
+    background-image: url(../../img/day.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+}
+
+.text{
+    width: 600px;
+    text-align: left;
+    margin-left: 310px;
+    color: black;
+    margin-bottom: 70px;
+}
+
+.text h5{
+      color: grey;
+      font-size: 13px;
+}
+
+.text h3{
+    font-family: calibri;
+    font-size: 12px;
+}
+
+.text p{
+    font-family: cambria;
+    font-size: 12px;
+}
+
+.second{
+
+    height: 400px;
+    background-color: beige;
+    background-image: url(../../img/dark.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+}
+
+.text1{
+    padding-left: -20px;
+    width: 600px;
+    text-align: left;
+    margin-left: 310px;
+    color: black;
+    margin-bottom: 80px; 
+}
+
+.text1 h5{
+    color: grey;
+}
+
+.text1 h3{
+  font-family: calibri;
+  font-size: 15px;
+}
+
+.text1 p{
+  font-family: cambria;
+  font-size: 12px;
+}
+
+/*.carousel .carousel-indicators li{
+    width: 20px;
+    height: 5px;
+    background-color: whitesmoke;
+}*/
+
+/*.carousel-indicators .active{
+    width: 20px;
+    height: 5px;
+
+}*/

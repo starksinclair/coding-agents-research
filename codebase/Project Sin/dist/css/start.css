@@ -1,0 +1,207 @@
+body{
+	font-family: sans-serif;
+	/*background-image: url("../img/dark.jpg");*/
+}
+.dise {
+	background-color: #0066ff;
+	color: white;
+}
+.dice{
+	background-color: #0f1f3d;
+	height: 400px;
+	color: white;
+	text-align: center;
+	padding-top: 120px;
+	position: relative;
+}
+.dife{
+	width: 36%;
+	border-color: white;
+	margin-bottom: 100px;
+	align-items: center;
+	margin-left: 280px;
+}
+.dihe{
+	background-color: #0066ff;
+	color: white;
+	position: absolute;
+	bottom: 150px;
+	left: 605px;
+	text-align: left;
+}
+.fa-desktop, .fa-layer-group, .fa-quidditch{
+	font-size: 50px;
+	color: #0066FF;
+}
+.dike {
+	margin-top: 120px;
+}
+.dike h4{
+	font-weight: bolder;
+	font-size: 20px;
+}
+.dike p{
+	font-size: 12px;
+	line-height: 5px;
+	font-weight: lighter;
+}
+.dibe{
+	margin-top: 80px;
+}
+.dive{
+	float: right;
+	padding-left: 50px;
+}
+.dive h4{
+	font-size: 20px;
+	font-weight: bolder;
+	padding-top: 80px;
+	/*padding-left: 40*/
+}
+.dive p{
+	font-size: 10px;
+	font-weight: lighter;
+	line-height: 2px;
+}
+.dize img{
+	width: 103%;
+	height: 60%;
+}
+.dixe{
+	margin-top:  -181px;
+}
+.dime{
+	margin-top: -197.5px;
+}
+.head {
+	text-align: center;
+	margin-top: -20px;
+}
+.img1 img{
+	border-radius: 50px;
+}
+.img1 p{
+	margin-top: 10px;
+	font-size: 10px;
+	font-weight: lighter;
+	line-height: 1px;
+}
+.dije{
+	background-color: #0f1f3d;
+	height: 200px;
+	color: white;
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 70px;
+	position: relative;	
+
+}
+.dioe{
+	background-color: #0066ff;
+	color: white;
+	position: absolute;
+	bottom: 35px;
+	left: 600px;
+	text-align: left;
+}
+.dile{
+	width: 35%;
+	border-color: white;
+	margin-top: 20px;
+	align-items: center;
+	margin-left: 280px;
+}
+.dite {
+	display: flex;
+	/*word-spacing: 5px;*/
+	padding-left: 3px;
+	margin-top: 30px;
+	text-decoration: none;
+}
+.un {
+	text-decoration: underline;
+}
+.icon{
+	text-align: left;
+	align-items: left;
+	margin-left: 250px;
+	margin-top: 30px;
+	padding-left: 10px;
+	font-size: 20px;
+}
+.footer{
+	margin-top: -20px;
+}
+
+
+
+@media screen and (max-width: 800px){
+	.dife{
+		width: 45%;
+		position: absolute;
+		left: -180px;
+	}
+	.dihe{
+		position: absolute;
+		bottom: 142.4px;
+		left: 305px;
+		text-align: left;
+	}
+
+	.dioe{
+		position: absolute;
+		bottom: 35px;
+		left: 390px;
+}	
+	.dike {
+			margin-top: 120px;
+			margin-left: 71.3px;
+}
+	.dike h4{
+		font-weight: bolder;
+		font-size: 20px;
+	}
+	.dike p{
+		font-size: 12px;
+		line-height: 10px;
+		font-weight: lighter;
+
+	}
+	.fa-desktop, .fa-layer-group, .fa-quidditch{
+		font-size: 70px;
+		color: #0066FF;
+	}
+	.fuo{
+		width: 100%;
+		/*padding-le/ft: 80px;*/
+		/*margin-left: 30px;*/
+	}
+	.p1 {
+		padding-top: 0px;
+	}
+	.dibe{
+	margin-top: 80px;
+}
+	.dive{
+		/*float: right;*/
+		/*padding-left: 50px;*/
+	}
+	.dipe{
+		width: 100%;
+		margin-left: 0px;
+	}
+	.dive h4{
+		font-size: 25px;
+		font-weight: bolder;
+		/*padding-top: 80px;*/
+	}
+	.dive p{
+		font-size: 20px;
+		font-weight: lighter;
+		line-height: 10px;
+	}
+	.dize img{
+		width: 103%;
+		height: 60%;
+	}
+}

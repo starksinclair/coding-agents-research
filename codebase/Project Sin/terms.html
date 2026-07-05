@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms Of Services</title>
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png">
+  <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/png">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
+  <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/png">
+  <link rel="shortcut icon" href="img/android-chrome-512x512.png" type="image/png">
+  <link rel="shortcut icon" href="img/apple-touch-icon.png" type="image/png">
+  <!-- <link href="img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/home.css">
+  <!-- <link rel="stylesheet" href="css/web.css"> -->
+  <link rel="stylesheet" href="css/terms.css">
+  <!-- <link rel="stylesheet" href="css/bulma.css"> -->
+</head>
+<body class="w3-sand">
+  <header id="home">
+    <nav id="nav">
+      <div class="wrapper">
+        <div class="navbar w3-bar w3-container">
+          <a href="home.html"><span class="open-slide fa fa-bars" onclick="openSlideMenu()"></span></a>
+            <div class="logo">
+             <a href="#"><img src="img/saint2.png" alt="logo" class="img-fluid img" title="Saintly"></a>
+            </div>
+            <ul class="w3-content wraper">
+              <a href="home.html" class="w3-bar-item">Home</a>
+              <a href="vip.html" class="w3-bar-item">Saintly Vip</a>
+              <a href="explore" class="w3-bar-item">Explore</a>
+              <a href="about.html" class="w3-bar-item">About Saintly</a>
+              <a href="#" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
+            </ul>
+            <a href="#" class="w3-bar-item" id="sign-in" onclick="document.getElementById('id01').style.display='block'">Sign in</a>
+            <button class="w3-btn w3-bar-item register" id="join" onclick="document.getElementById('id02').style.display='block'">Join</button>
+            <!-- <div class="w3-dropdown-hover">
+            <i class="fa fa-user-circle"></i>
+            <div class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="#" class="w3-bar-item w3-button">Link 1</a>
+              <a href="#" class="w3-bar-item w3-button">Link 2</a>
+              <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+            </div> -->
+
+<!-- THE MODAL -->
+
+            <div id="id01" class="w3-modal">
+              <div class="w3-modal-content loginbox w3-animate-zoom" style="max-width:380px">
+                <header class="w3-container"> 
+                  <span onclick="document.getElementById('id01').style.display='none'" 
+                  class="w3-button w3-display-topright">&times;</span>
+                  <h4 class="w3-center w3-padding-16">Logging in to Saintly</h4>
+                </header>
+                <div class="w3-container">
+                  <div class="modal-facebook w3-center">
+                    <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+                  </div><br>
+                  <div class="modal-google w3-center">
+                    <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+                  </div>
+                  <hr><p class="w3-center font-weight-bold">OR</p><hr>
+                  <form action="home.html">
+                    <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                    <input type="password" name="password" class="form-control" placeholder="Password" required><br>
+                    <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+                  </form>
+                  <div class="w3-row">
+                    <div class="w3-half">
+                      <input type="checkbox" name="checkbox">  <label for="checkbox">Remember Me</label>
+                    </div>
+                    <div class="w3-rest pl-3">
+                      <a href="#" class="w3-text-cyan forgot" onclick="document.getElementById('id0l4').style.display='block'">Forgot Password?</a>
+                      
+                    </div>
+                  </div><hr>
+                </div>
+                <footer class="w3-container w3-center">
+                  <p>Not a member yet? <a href="#" class="w3-text-light-cyan log">Join now</a></p>
+                </footer>
+              </div>
+
+
+              <div class="w3-modal-content registerbox w3-animate-zoom" style="max-width:380px">
+        
+            <header class="w3-container">
+              <span onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h4 class="w3-center w3-padding-16">Signing up to Saintly</h4>
+            </header>
+        
+            <div class="w3-container">
+              <div class="modal-facebook w3-center">
+                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+              </div><br>
+              <div class="modal-google w3-center">
+                <a href="#"><img src="img/download2-removebg-preview.png" alt=""></i> Continue with Google</a>
+              </div><br>
+              <hr><p class="w3-center font-weight-bold">OR</p><hr>
+              <form action="home.html" method="post">
+                <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+              </form>
+              <div class="w3-row">
+                <div class="w3-rest">
+                  <p>By joining I agree to receive emails from Saintly</p>
+                </div>                      
+              </div>
+            </div>
+        
+            <footer class="w3-container w3-center">
+              <p>Already a member? <a href="#" class="w3-text-cyan reg">back to Sign in</a></p>
+            </footer>
+          </div>
+                   <!-- FORGOT PASSWORD -->
+         <!-- <div class="w3-modal" id="idol4"> -->
+          <div class="container forgotpas w3-modal-content w3-animate-zoom w3-modal" style="max-width:380px; max-height: 320px;">
+            <header class="w3-container"> 
+              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright cls">&times;</span>
+              <h4 class="w3-center w3-padding-16 font-weight-bolder">Reset Passsword</h4>
+            </header>
+            <div class="w3-center">
+             <p>Please enter your email address and we will <br>
+            send you a link to reset your password</p>
+            <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
+            <input type="button" value="Submit" class="form-control w3-dark-cyan"><br>
+          </div><hr>
+          <footer class="w3-container w3-center">
+            <p>Back to <a href="#" class="w3-text-light-cyan log3">Sign in</a></p>
+          </footer>
+        </div>
+      <!-- </div> -->
+        </div>
+
+      <!-- SIGN UP  -->
+            
+        <div id="id02" class="w3-modal">
+          <div class="w3-modal-content registerbo w3-animate-zoom" style="max-width:380px">
+        
+            <header class="w3-container">
+              <span onclick="document.getElementById('id02').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h4 class="w3-center w3-padding-16">Signing up to Saintly</h4>
+            </header>
+        
+            <div class="w3-container">
+              <div class="modal-facebook w3-center">
+                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+              </div><br>
+              <div class="modal-google w3-center">
+                <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+              </div><br>
+              <hr><p class="w3-center font-weight-bold">OR</p><hr>
+              <form action="home.html" method="post">
+                <input type="text" name="text" class="form-control" placeholder="Email / Username"><br>
+                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+              </form>
+              <div class="w3-row">
+                <div class="w3-rest">
+                  <p>By joining I agree to receive emails from Saintly</p>
+                </div>                      
+              </div>
+            </div>
+        
+            <footer class="w3-container w3-center">
+              <p>Already a member? <a href="#" class="w3-text-cyan reg1">back to Sign in</a></p>
+            </footer>
+          </div>
+
+          <div class="w3-modal-content loginbo w3-animate-zoom" style="max-width:380px">
+            <header class="w3-container"> 
+              <span onclick="document.getElementById('id02').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              <h4 class="w3-center w3-padding-16">Logging in to Saintly</h4>
+            </header>
+            <div class="w3-container">
+              <div class="modal-facebook w3-center">
+                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+              </div><br>
+              <div class="modal-google w3-center">
+                <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+              </div>
+              <hr><p class="w3-center font-weight-bold">OR</p><hr>
+              <form action="home.html">
+                <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                <input type="password" name="password" class="form-control" placeholder="Password" required`><br>
+                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+              </form>
+              <div class="w3-row">
+                <div class="w3-half">
+                  <input type="checkbox" name="checkbox">  <label for="checkbox">Remember Me</label>
+                </div>
+                <div class="w3-rest pl-3">
+                  <a href="#" class="w3-text-cyan forgot" onclick="document.getElementById('id0l3').style.display='block'">Forgot Password?</a>
+                  
+                </div>
+              </div><hr>
+            </div>
+            <footer class="w3-container w3-center">
+              <p>Not a member yet? <a href="#" class="w3-text-light-cyan log1">Join now</a></p>
+            </footer>
+          </div>
+                <!-- FORGOT PASSWORD -->
+          <div class="container forgotpas w3-modal-content w3-animate-zoom w3-modal" style="max-width:380px; max-height: 320px;">
+            <header class="w3-container"> 
+              <span onclick="document.getElementById('id02').style.display='none'" 
+              class="w3-button w3-display-topright">&times;</span>
+              <h4 class="w3-center w3-padding-16 font-weight-bolder">Reset Passsword</h4>
+            </header>
+            <div class="w3-center">
+             <p>Please enter your email address and we will <br>
+            send you a link to reset your password</p>
+            <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
+            <input type="button" value="Submit" class="form-control w3-dark-cyan"><br>
+          </div><hr>
+          <footer class="w3-container w3-center">
+            <p>Back to <a href="#" class="w3-text-light-cyan log2">Sign in</a></p>
+          </footer>
+        </div>
+
+      </div>  
+        </div>
+        <!-- <div class="w3-content search-bar">
+          <input type="search" name="search" id="input" class="form-control" placeholder="Hire Services">
+          <a href="#"><span class="fa fa-search w3-text-grey"></span></a>
+          <button type="submit" class="w3-btn w3-round">Get Started</button>
+        </div><hr>   -->
+      </div>
+    </nav>
+    <div id="side-menu" class="side-nav">
+      <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+      <a href="#home" class="w3-bar-item">Home</a>
+      <a href="#" class="w3-bar-item">Saintly Pro</a>
+      <a href="explore.html" class="w3-bar-item">Explore <i class="fa fa-caret-down"></i></a>
+      <a href="404.html" class="w3-bar-item">Why Saintly <i class="fa fa-caret-down"></i></a>
+      <a href="404.html" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
+      <a href="404.html" class="w3-bar-item">Sign in</a>
+    </div>
+    <div id="nav2">
+      <div class="container-fluid bottom-nav">
+        <a href="web.html">Web Development</a>
+        <a href="marketing.html">Digital Marketing</a>
+        <a href="404.html">Programming & Tech</a>
+        <a href="writing.html">Writing & Translation</a>
+        <a href="video.html">Video Editor</a>
+        <a href="graphics.html">Graphics Design</a>
+        <a href="404.html">Music & Audio</a>
+        <a href="404.html">Data Analyst</a>
+        <a href="404.html">Lifestyle</a>
+      </div>
+    </div>
+  </header>
+  <div class="w3-padding-64 terms-box container">
+    <div class="w3-card-4 container w3-white w3-padding-24">
+      <h1 class="">TERMS OF SERVICES</h1>
+      <p class="lead">Last Update: August 2021</p>
+      <hr class="my-2">
+      <p>Welcome to Saintly</p>
+      <p>The following terms of service (these "Terms of Service"), govern your access to and use of the Saintly website and mobile application, including any content, functionality and services offered on or through www.fiverr.com or the Saintly mobile application (the "Site") by Saintly International Ltd. (8 Kaplan St. Tel Aviv 6473409, Israel) and its subsidiaries: Saintly Inc. (38 Greene St. NY 10013, NY, USA) and Saintly Limited (Lemesou 11, 2112 Nicosia, Cyprus), as applicable. Saintly International Ltd. and its subsidiaries are collectively referred hereto as "Saintly" "we" or "us" and “you” or “user” means you as an user of the Site.</p>
+      <p>Please read the Terms of Service carefully before you start to use the Site. By using the Site, opening an account or by clicking to accept or agree to the Terms of Service when this option is made available to you, you accept and agree, on behalf of yourself or on behalf of your employer or any other entity (if applicable), to be bound and abide by these Terms of Service, Saintly Payment Terms, found here (“Payment Terms”), and our Privacy Policy, found here, each of which is incorporated herein by reference. If you do not want to agree to these Terms of Service or the Privacy Policy, you must not access or use the Site. For more detailed policies surrounding the activity and usage on the Site, please access the designated articles herein.</p>
+      <p>This Site is offered and available to users who are 13 years of age or older. If you are under 13 you may not use this Site or the Saintly services. By using this Site, you represent and warrant that you are of legal age to form a binding contract and meet all of the foregoing eligibility requirements. If you do not meet all of these requirements, you must not access or use the Site. <br> Our Customer Support team is available 24/7 if you have any questions regarding the Site or Terms of Service. Contacting our Customer Support team can be performed by submitting a request here. <br>The original language of these Terms of Service, as well as all other texts throughout the Site, is English. Saintly makes available this translation for convenience only. In case of conflicts between the original English version and any translation, the English version shall prevail.</p><br>
+      <h5>Key Terms</h5>
+      <p><b>Buyers</b> are users who purchase services on Saintly.</p>
+      <p><b>Business Account</b> is a collaborative Buyer account, created via Saintly Business, as detailed on Saintly Business Terms of Service (available here).</p>
+      <p><b></b> are the formal agreements between a Buyer and Seller after a purchase was made from the Seller’s Gig Page.</p>
+      <p><b>Sellers</b> are users who offer and perform services through Gigs or through the Logo Maker on Saintly.</p><br>
+      <h5>Overview (Main terms, in a nutshell)</h5>
+      <ol style="list-style-type: disc;">
+        <li>Only registered users may buy and sell on Saintly. Registration is free. In registering for an account, you agree to provide us with accurate, complete and updated information and must not create an account for fraudulent or misleading purposes. You are solely responsible for any activity on your account and for maintaining the confidentiality and security of your password. We are not liable for any acts or omissions by you in connection with your account.</li>
+        <li>Gigs on Saintly may be offered at a base starting price of $5. Some Gigs are offered at a base price of more than $5 as determined by the Seller.</li>
+        <li>Buyers pay Saintly in advance to create an order (see Payment Terms).</li>
+        <li>Orders are purchased through the Order button found on a Seller’s Gig page or through a Custom Offer.</li>
+        <li>For fees and payments please read the Payment Terms</li>
+        <li>Sellers must fulfill their orders, and may not cancel orders on a regular basis or without cause. Cancelling orders will affect Sellers’ reputation and status.</li>
+        <li>Sellers gain account statuses (Levels) based on their performance and reputation. Advanced levels provide their owners with benefits, including offering services for higher prices through Gig Extras, or selling their Gig in multiples.</li>
+        <li>Users may not offer or accept payments using any method other than placing an order through Saintly.com.</li>
+        <li>We care about your privacy. You can read our Privacy Policy here. The Privacy Policy is a part of these Terms of Service and incorporated herein by reference.</li>
+        <li>Users undertake to comply with Fiverr’s Community Standards, which are a set of behavior rules and guidelines, applicable to the Saintly community and marketplace in addition to these Terms of Service, as updated from time to time.</li>
+      </ol><br>
+      <h5>Sellers</h5>
+      <p><b>Basic</b></p>
+      <ol style="list-style-type: disc;">
+        <li>Sellers create Gigs on Saintly to allow Buyers to purchase their services.</li>
+        <li>Sellers may also offer Custom Offers to Buyers in addition to their Gigs.</li>
+        <li>Each Gig you sell and successfully complete, accredits your account with a revenue equal to 80% of the purchase amount.</li>
+        <li>Saintly accredits Sellers once an order is completed. See our "Orders" section below for a definition of a completed order.</li>
+        <li>For more information about receiving payments, fees and taxes see the Payment Terms.</li>
+        <li>Sellers may not promote their Gigs or any Saintly content via the Google Ads platform.</li>
+        <li>The Seller's rating is calculated based on the order reviews posted by Buyers or Business Account Team Members. High ratings allow Sellers to obtain advanced Seller levels (see Levels below). In certain cases, exceedingly low ratings may lead to the suspension of the Seller’s account.</li>
+        <li>For security concerns, Saintly may temporarily disable a Seller’s ability to withdraw revenue to prevent fraudulent or illicit activity. This may come as a result of security issues, improper behavior reported by other users, or associating multiple Saintly accounts to a single withdrawal provider.</li>
+        <li>Sellers are responsible for obtaining a general liability insurance policy with coverage amounts that are sufficient to cover all risks associated with the performance of their services.</li>
+      </ol><br>
+      <p><b>Gigs</b></p>
+      <ol style="list-style-type: disc;">
+        <li>Sellers are allowed to post a select amount of active Gigs based on their Level status.</li>
+          <ol style="list-style-type: circle;">
+            <li>7 Gigs for Sellers without a Level status.</li>
+            <li>10 Gigs for Level 1 Sellers.</li>
+            <li>20 Gigs for Level 2 Sellers.</li>
+            <li>30 Gigs for Top Rated Sellers.</li>
+          </ol>
+        <li>Gigs created on Saintly are User Generated Content.</li>
+        <li>Gigs and/or users may be removed by Saintly from the Site for violations of these Terms of Service and/or our Community Standards, which may include (but are not limited to) the following violations and/or materials:</li>
+          <ol style="list-style-type: circle;">
+            <li>Illegal or Fraudulent services</li>
+            <li>Copyright Infringement, Trademark Infringement, and violation of a third party's terms of service reported through our Intellectual Property Claims Policy found here</li>
+            <li>Adult oriented services, Pornographic, Inappropriate/Obscene</li>
+            <li>Intentional copies of Gigs</li>
+            <li>Spam, nonsense, or violent or deceptive Gigs</li>
+            <li>Gigs misleading to Buyers or others</li>
+            <li>Reselling of regulated goods</li>
+            <li>Offering to prepare academic works on behalf of Buyers</li>
+            <li>Exceedingly low quality Gigs</li>
+            <li>Promoting Saintly and/or Saintly Gigs through activities that are prohibited by any laws, regulations, and/or third parties' terms of service, as well as through any marketing activity that negatively affects our relationships with our users or partners.</li>
+          </ol>
+        <li>Gigs that are removed for violations mentioned above, may result in the suspension of the Seller’s account.</li>
+        <li>Gigs that are removed for violations are not eligible to be restored or edited.</li>
+        <li>Gigs may be removed from our Search feature due to poor performance and/or user misconduct.</li>
+        <li>Gigs may include pre-approved website URLs contained within the Gig description and requirements box. Gigs containing websites promoting content, which violates Fiverr’s Terms of Service and/or our Community Standards, will be removed.</li>
+        <li>Gigs are required to have an appropriate Gig image related to the service offered. An option to upload two additional Gig images are available to all Sellers. Sellers must deliver the same quality of service as shown on their Gig images. Recurring deliveries that don’t match the quality shown on the Gig images may lead to the Seller’s account losing Seller status or becoming permanently disabled.</li>
+        <li>Gigs may contain an approved Gig Video uploaded through the Gig management tools available on Saintly.</li>
+        <li>Statements on the Gig Page that undermine or circumvent these Terms of Service is prohibited.</li>
+        <li>Eligible Gigs in select Categories may set up Gig Packages to offer their services in structured formats with multiple price points for the selected Gig.</li>
+        <li>Certain categories are available only to Pro Sellers to create Gigs. If you are not a Pro Seller, creating a Gig for services available to Pro only may result in removal of your Gig.</li>
+      </ol><br>
+      <h5>Levels</h5>
+      <p>Saintly is all about helping Sellers leverage their skills. We seek to empower top performing Sellers with helpful tools to grow their business. Sellers who invest in self-promotion may achieve greater customer satisfaction. And, if they deliver on time and maintain high quality and ratings, Saintly may reward them with new statuses, special opportunities, benefits, and tools that come with it.</p>
+      <ol style="list-style-type: disc;">
+        <li>Saintly Sellers can gain account Levels based on their activity, performance and reputation. The advancement criteria can be found here.</li>
+        <li>Advancement in Levels are updated periodically by an automated system.</li>
+        <li>The current Levels a Seller can achieve are, Level 1, 2, and Top Rated.</li>
+        <li>Sellers who cannot maintain their high quality service, experience a severe drop in ratings, or stop delivering on time risk losing their Seller status and the benefits that come with it. For example, late deliveries, warnings to the Seller’s account and cancellations can cause a Seller to move to a different Level.</li>
+        <li>Advanced levels provide their owners with additional benefits, including offering Gigs for higher prices through Gig Extras, or selling their Gig in multiples.</li>
+      </ol><br>
+      <h5>Top Rated Sellers</h5>
+      <ol style="list-style-type: disc;">
+        <li>Top Rated Sellers are chosen manually by Saintly editors through an ongoing review process based on seniority, volume of sales, extremely high ratings, exceptional customer care, high order completion rate and community leadership. Top Rated Sellers gain access to more extensive features than previous levels, including exclusive access to beta features and VIP support.</li>
+        <li>Top Rated eligibility is constantly evaluated by Saintly to ensure that the quality standards and expectations of the Top Rated selection is kept. Saintly retains the right to change a Top Rated Seller status in light of such evaluation. In addition, Top Rated Sellers who cannot maintain their high quality service through a severe drop in ratings, stop delivering on time, increased cancellation rate or violate our Terms of Service and/or our Community Standards, also risk losing their Top Rated status and the benefits that come with it.</li>
+      </ol><br>
+
+      <h5>Pro Sellers</h5>
+      <ol style="list-style-type: disc;">
+        <li>Pro Sellers are pre-verified professionals who undergo a vetting process by Saintly editors. Applying for Saintly Pro is open to everyone: professional freelancers who are new to Saintly, as well as existing Saintly Sellers.</li>
+        <li>Pro Sellers eligibility is constantly evaluated by Saintly to ensure that the quality standards and expectations of the Pro Seller selection is kept. Saintly retains the right to change a Pro Seller status in light of such evaluation. In addition, Pro Sellers who cannot maintain their high quality service through a severe drop in ratings, stop delivering on time, increased cancellation rate or violate our Terms of Service, also risk losing their Pro status and the benefits that come with it.</li>
+      </ol><br><br>
+      <h4>Reviews</h4>
+        <ol style="list-style-type: square;">
+          <li>Feedback reviews provided by Buyers while completing an Order are an essential part of Saintly's rating system. Reviews demonstrate the Buyer's overall experience with the Sellers and their service. Buyers are encouraged to communicate to the Seller any concerns experienced during their active order in regards to the service provided by the Seller.</li>
+          <li>Leaving a Buyer's feedback is a basic prerogative of a Buyer. Feedback reviews will not be removed unless there are clear violations of our Terms of Service and/or our Community Standards.</li>
+          <li>To prevent any misuse of our Feedback system, all feedback reviews must come from legitimate sales executed exclusively through the Saintly platform from users within our Community. Purchases arranged, determined to artificially enhance Seller ratings, or to abuse the Saintly platform with purchases from additional accounts, will result in a permanent suspension of all related accounts.</li>
+          <li>Feedback comments given by Buyers are publicly displayed on a Seller’s Gig page.</li>
+          <li>Work Samples are the delivered images and videos sent to a Buyer in a delivery message. Work Samples are added to a Seller's Live Portfolio on their Gig page if the Buyer chooses to publish the Work Sample while providing a public feedback review.</li>
+          <li>Withholding the delivery of services, files, or information required to complete the Gig’s service with the intent to gain favorable reviews or additional services is prohibited.</li>
+          <li>Responding and posting a review: Once work is delivered, the Buyer has three days to respond. If no response is provided within the response period, the Order will be considered completed.</li>
+          <li>Users are allowed to leave reviews on Orders up to 10 days after an Order is marked as complete. No new reviews may be added to an Order after 10 days.</li>
+          <li>Sellers may not solicit the removal of feedback reviews from their Buyers through mutual cancellations.</li>
+        </ol><br>
+        <h4>Disputes and Cancellations</h4>
+        <p>We encourage our Buyers and Sellers to try and settle conflicts amongst themselves. If for any reason this fails after using the Resolution Center or if you encounter non-permitted usage on the Site, users can contact Saintly's Customer Support department for assistance here. For more information about disputes, Order cancellations and refunds please refer to the Payment Terms.</p>
+        <h4>User Generated Content</h4>
+        <p>User Generated Content ("UGC") refers to the content added by users as opposed to content created by the Site. All content uploaded to Fiverr by our users (Buyers and Sellers) is User Generated Content. Fiverr does not check user uploaded/created content for appropriateness, violations of copyright, trademarks, other rights or violations and the user uploading/creating such content shall be solely responsible for it and the consequences of using, disclosing, storing, or transmitting it. By uploading to, or creating content on, the Fiverr platform, you represent and warrant that you own or have obtained all rights, licenses, consents, permissions, power and/or authority, necessary to use and/or upload such content and that such content or the use thereof in the Site does not and shall not (a) infringe or violate any intellectual property, proprietary or privacy, data protection or publicity rights of any third party; (b) violate any applicable local, state, federal and international laws, regulations and conventions; and/or (c) violate any of your or third party’s policies and/or terms of service. We invite everyone to report violations together with proof of ownership as appropriate. Reported violating content may be removed or disabled. <br>Furthermore, Fiverr is not responsible for the content, quality or the level of service provided by the Sellers (even if they are Pro Sellers, Top Rated Sellers, offer Promoted Gigs or otherwise). We provide no warranty with respect to the Gigs, their delivery, any communications between Buyers and Sellers, and the Logo Designs created through the Logo Maker. We encourage users to take advantage of our rating system, our community and common sense in choosing appropriate services. <br>By offering a service, the Seller undertakes that he/she has sufficient permissions, rights and/or licenses to provide, sell or resell the service that is offered on Fiverr. Sellers advertising online their Gig or Logo Design created through the Logo Maker must comply with laws and terms of service of the advertising platform or relevant website used to advertise. Failing to do so may result in removal of the Gig or Logo Design from the Logo Maker, as applicable, and may lead to the suspension of Seller's account. <br>For specific terms related to Intellectual Property rights and for reporting claims of copyright infringement (DMCA notices) or trademark infringement - please see our Intellectual Property Claims Policy which forms an integral part of these Terms of Service. Note that it is our policy in appropriate circumstances to disable and/or terminate the accounts of users who are repeat infringers.</p>
+        <h4>Ownership</h4>
+        <p>Ownership and limitations: When purchasing a Gig on Fiverr, unless clearly stated otherwise on the Seller's Gig page/description, when the work is delivered, and subject to payment, the Buyer is granted all intellectual property rights, including but not limited to, copyright in the work delivered from the Seller, and the Seller waives any and all moral rights therein. Accordingly, the Seller expressly assigns to the Buyer the copyright in the delivered work. All transfer and assignment of intellectual property to the Buyer shall be subject to full payment for the Gig, and the delivery may not be used if payment is cancelled for any reason. For removal of doubt, in custom created work (such as art work, design work, report generation etc.), the delivered work and its copyright shall be the exclusive property of the Buyer and, upon delivery, the Seller agrees that it thereby, pursuant to these Terms of Service, assigns all right, title and interest in and to the delivered work to the Buyer. Some Gigs (including for custom created work) charge additional payments (through Gig Extras) for a Commercial Use License. This means that if you purchase the Gig for personal use, you will own all rights you require for such use, and will not need the Commercial Use License. If you intend to use it for any charge or other consideration, or for any purpose that is directly or indirectly in connection with any business, or other undertaking intended for profit, you will need to buy the Commercial Use License through a Gig Extra and will have broader rights that cover your business use. <br>For Voice Over Gigs, when the work is delivered, and subject to payment, the Buyer is purchasing basic rights, (which means the Buyer is paying a one time fee allowing them to use the work forever and for any purpose except for commercials, radio, television and internet commercial spots). If you intend to use the Voice Over to promote a product and/or service (with the exception of paid marketing channels), you will need to purchase the Commercial Rights (Buy-Out) through Gig Extra. If you intend to use the Voice Over in radio, television and internet commercials, you will need to purchase the Full Broadcast Rights (Buy-Out) through Gig Extra. For further information on the type of buy-outs, please read below. <br>Furthermore, users (both Buyers and Sellers) agree that unless they explicitly indicate otherwise, the content users voluntarily create/upload to Fiverr, including Gig texts, photos, videos, usernames, user photos, user videos and any other information, including the display of delivered work, may be used by Fiverr for no consideration for marketing and/or other purposes.</p>
+        <h4>Disclaimer of Warranties</h4>
+        <p>YOUR USE OF THE SITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE IS AT YOUR OWN RISK. THE SITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. NEITHER FIVERR NOR ANY PERSON ASSOCIATED WITH FIVERR MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY OR AVAILABILITY OF THE WEBSITE. <br><br>THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.</p>
+        <h4>Limitation on Liability</h4>
+        <p>IN NO EVENT WILL FIVERR, ITS AFFILIATES OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, PERSONAL INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT OR OTHERWISE, EVEN IF FORESEEABLE. <br><br>THE FOREGOING DOES NOT AFFECT ANY LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW</p>
+    </div>
+  </div>
+
+<footer class="footer mt-5">
+  <!-- FOR SMALL SCREEN -->
+<div class="w3-container pt-3 accordion">
+  <div id="accordion" class="pt-2">
+    <a href="#collapseone" class="w3-large w3-text-white" data-toggle="collapse">Categories    <i class="fa fa-caret-down"></i></a>
+    <div id="collapseone" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ul class="">
+         <a href="web.html">Web Development</a><br>
+          <a href="marketing.html">Digital Marketing</a><br>
+          <a href="404.html">Programming & Tech</a><br>
+          <a href="writing.html">Writing & Translation</a><br>
+          <a href="video.html">Video Editor</a><br>
+          <a href="graphics.html">Graphics Design</a><br>
+          <a href="404.html">Music & Audio</a><br>
+          <a href="404.html">Data Analyst</a><br>
+          <a href="404.html">Lifestyle</a>
+        </ul>
+      </div>
+    </div>				
+  </div>
+  <div id="accordion" class="pt-2">
+    <a href="#collapsetwo" class="w3-large w3-text-white" data-toggle="collapse">For Clients   <i class="fa fa-caret-down"></i></a>
+    <div id="collapsetwo" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ul class="">
+          <a href="#">How to hire</a><br>
+          <a href="#">Marketplace</a><br>
+          <a href="#">Projects</a><br>
+          <a href="#">Direct Contracts</a><br>
+        </ul>
+      </div>
+    </div>				
+  </div>
+  <div id="accordion" class="pt-2">
+    <a href="#collapsethree" class="w3-large w3-text-white" data-toggle="collapse">Support   <i class="fa fa-caret-down"></i></a>
+    <div id="collapsethree" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ul class="">
+          <a href="#">Help and Support</a><br>
+          <a href="#">Trust and Safety</a><br>
+          <a href="#">Buying on Saintly</a><br>
+          <a href="#">Selling on Saintly</a><br>
+        </ul>
+      </div>
+    </div>				
+  </div>
+  <div id="accordion" class="pt-2">
+    <a href="#collapsefour" class="w3-large w3-text-white" data-toggle="collapse">Company   <i class="fa fa-caret-down"></i></a>
+    <div id="collapsefour" class="collapse" data-parent="#accordion">
+      <div class="card-body">
+        <ul class="">
+          <a href="#">Careers</a><br>
+          <a href="#">Patnerships</a><br>
+          <a href="#">About Us</a><br>
+          <a href="#">Privacy Policy</a><br>
+          <a href="#">Terms of Service</a><br>
+        </ul>
+      </div>
+    </div>				
+  </div>
+</div>
+      <!-- FOR LARGE SCREEN -->
+<div class="container fot">
+  <div class="row">
+    <div class="col-lg-3 pt-5">
+      <h4>Categories</h4>
+        <a href="web.html">Web Development</a><br>
+        <a href="marketing.html">Digital Marketing</a><br>
+        <a href="404.html">Programming & Tech</a><br>
+        <a href="writing.html">Writing & Translation</a><br>
+        <a href="video.html">Video Editor</a><br>
+        <a href="graphics.html">Graphics Design</a><br>
+        <a href="404.html">Music & Audio</a><br>
+        <a href="404.html">Data Analyst</a><br>
+        <a href="404.html">Lifestyle</a>
+    </div>
+    <div class="col-lg-3 pt-5">
+      <h4>For Clients</h4>
+      <a href="#">How to hire</a><br>
+      <a href="#">Marketplace</a><br>
+      <a href="#">Projects</a><br>
+      <a href="#">Direct Contracts</a><br>
+    </div>
+    <div class="col-lg-3 pt-5">
+      <h4>Support</h4>
+      <a href="#">Help and Support</a><br>
+      <a href="#">Trust and Safety</a><br>
+      <a href="#">Buying on Saintly</a><br>
+      <a href="#">Selling on Saintly</a><br>
+    </div>
+    <div class="col-lg-3 pt-5">
+      <h4>Company</h4>
+      <a href="#">Careers</a><br>
+      <a href="#">Patnerships</a><br>
+      <a href="about.html"></a>About Us</a><br>
+      <a href="#">Privacy Policy</a><br>
+      <a href="terms.html">Terms of Service</a><br>
+    </div>
+  </div>
+</div><hr>
+<div class="w3-container">
+  <div class="row foote">
+    <div class="col-md-6 col-sm-12">
+      <a href="#"><img src="img/saint2.png" alt="logo" class="img-fluid img" title="Saintly"></a>
+     <!-- <div class="col-sm-12 col-6"> -->
+      <span class="pl-3 w3-text-white w3-mobile"> &copy; Saintly International Ltd.2021</span>
+     <!-- </div> -->
+    </div>
+    <div class="col-md-6 text-right col-sm-12">
+      <ul>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+ 
+  <a href="#home" class="scroll-link top-link">
+		<i class="fas fa-arrow-up"></i>
+	</a>
+</body>
+  <script type="text/javascript" src="dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="dist/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="dist/js/all.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.bundle.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/home.js"></script>
+  <script>
+    $(function () {
+  $(".log").on("click", function (e) {
+    $(".loginbox").css("display", "none");
+    $(".registerbox").css("display", "block");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".reg").on("click", function (e) {
+    $(".loginbox").css("display", "block");
+    $(".registerbox").css("display", "none");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".log1").on("click", function (e) {
+    $(".loginbo").css("display", "none");
+    $(".registerbo").css("display", "block");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".reg1").on("click", function (e) {
+    $(".loginbo").css("display", "block");
+    $(".registerbo").css("display", "none");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".forgot").on("click", function (e) {
+    $(".loginbo").css("display", "none");
+    $(".registerbo").css("display", "none");
+    $(".forgotpas").css("display", "block");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".log2").on("click", function (e) {
+    $(".loginbo").css("display", "block");
+    $(".registerbo").css("display", "none");
+    $(".forgotpas").css("display", "none");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".forgot").on("click", function (e) {
+    $(".loginbox").css("display", "none");
+    $(".registerbox").css("display", "none");
+    $(".forgotpas").css("display", "block");
+    e.preventDefault();
+  });
+});
+
+$(function () {
+  $(".log3").on("click", function (e) {
+    $(".loginbox").css("display", "block");
+    $(".registerbox").css("display", "none");
+    $(".forgotpas").css("display", "none");
+    e.preventDefault();
+  });
+});
+
+  </script>
+</html>

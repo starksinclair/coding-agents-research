@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saintly</title>
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/png">
+  <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/png">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/png">
+  <link rel="shortcut icon" href="img/android-chrome-192x192.png" type="image/png">
+  <link rel="shortcut icon" href="img/android-chrome-512x512.png" type="image/png">
+  <link rel="shortcut icon" href="img/apple-touch-icon.png" type="image/png">
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/home.css">
+  <!-- <link rel="stylesheet" href="css/web.css"> -->
+  
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header" id="home">
+    <nav id="nav" class="nav1">
+      <div class="wrapper">
+        <div class="navbar w3-bar w3-container">
+          <a href="#"><span class="open-slide fa fa-bars" onclick="openSlideMenu()"></span></a>
+            <div class="logo">
+             <a href="home.html"><img src="img/saint2.png" alt="logo" class="img-fluid img" title="Saintly"></a>
+            </div>
+             <ul class="w3-content wraper">
+              <a href="home.html" class="w3-bar-item w3-text-light-cyan">Home</a>
+              <a href="vip.html" class="w3-bar-item">Saintly Vip</a>
+              <a href="explore.html" class="w3-bar-item">Explore</a>
+              <a href="about.html" class="w3-bar-item" >About Saintly</a>
+               <a href="#" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
+              </ul>
+              <a href="#" class="w3-bar-item" id="sign-in" onclick="document.getElementById('id01').style.display='block'">Sign in</a>
+              <button class="w3-btn w3-bar-item register" id="join" onclick="document.getElementById('id02').style.display='block'">Join</button>
+              <!-- <div class="w3-dropdown-hover">
+              <i class="fa fa-user-circle"></i>
+              <div class="w3-dropdown-content w3-bar-block w3-border">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+              </div>
+              </div> -->
+
+  <!-- THE MODAL -->
+
+              <div id="id01" class="w3-modal">
+                <div class="w3-modal-content loginbox w3-animate-zoom" style="max-width:380px">
+                  <header class="w3-container"> 
+                    <span onclick="document.getElementById('id01').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <h4 class="w3-center w3-padding-16">Logging in to Saintly</h4>
+                  </header>
+                  <div class="w3-container">
+                    <div class="modal-facebook w3-center">
+                      <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+                    </div><br>
+                    <div class="modal-google w3-center">
+                      <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+                    </div>
+                    <hr><p class="w3-center font-weight-bold">OR</p><hr>
+                    <form action="home.html">
+                      <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                      <input type="password" name="password" class="form-control" placeholder="Password" required><br>
+                      <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+                    </form>
+                    <div class="w3-row">
+                      <div class="w3-half">
+                        <input type="checkbox" name="checkbox">  <label for="checkbox">Remember Me</label>
+                      </div>
+                      <div class="w3-rest pl-3">
+                        <a href="#" class="w3-text-cyan forgot" onclick="document.getElementById('id0l4').style.display='block'">Forgot Password?</a>
+                        
+                      </div>
+                    </div><hr>
+                  </div>
+                  <footer class="w3-container w3-center">
+                    <p>Not a member yet? <a href="#" class="w3-text-light-cyan log">Join now</a></p>
+                  </footer>
+                </div>
+
+
+                <div class="w3-modal-content registerbox w3-animate-zoom" style="max-width:380px">
+          
+              <header class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+                <h4 class="w3-center w3-padding-16">Signing up to Saintly</h4>
+              </header>
+          
+              <div class="w3-container">
+                <div class="modal-facebook w3-center">
+                  <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+                </div><br>
+                <div class="modal-google w3-center">
+                  <a href="#"><img src="img/download2-removebg-preview.png" alt=""></i> Continue with Google</a>
+                </div><br>
+                <hr><p class="w3-center font-weight-bold">OR</p><hr>
+                <form action="home.html" method="post">
+                  <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                  <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+                </form>
+                <div class="w3-row">
+                  <div class="w3-rest">
+                    <p>By joining I agree to receive emails from Saintly</p>
+                  </div>                      
+                </div>
+              </div>
+          
+              <footer class="w3-container w3-center">
+                <p>Already a member? <a href="#" class="w3-text-cyan reg">back to Sign in</a></p>
+              </footer>
+            </div>
+                     <!-- FORGOT PASSWORD -->
+           <!-- <div class="w3-modal" id="idol4"> -->
+            <div class="container forgotpas w3-modal-content w3-animate-zoom w3-modal" style="max-width:380px; max-height: 320px;">
+              <header class="w3-container"> 
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright cls">&times;</span>
+                <h4 class="w3-center w3-padding-16 font-weight-bolder">Reset Passsword</h4>
+              </header>
+              <div class="w3-center">
+               <p>Please enter your email address and we will <br>
+              send you a link to reset your password</p>
+              <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
+              <input type="button" value="Submit" class="form-control w3-dark-cyan"><br>
+            </div><hr>
+            <footer class="w3-container w3-center">
+              <p>Back to <a href="#" class="w3-text-light-cyan log3">Sign in</a></p>
+            </footer>
+          </div>
+        <!-- </div> -->
+          </div>
+
+        <!-- SIGN UP  -->
+              
+          <div id="id02" class="w3-modal">
+            <div class="w3-modal-content registerbo w3-animate-zoom" style="max-width:380px">
+          
+              <header class="w3-container">
+                <span onclick="document.getElementById('id02').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+                <h4 class="w3-center w3-padding-16">Signing up to Saintly</h4>
+              </header>
+          
+              <div class="w3-container">
+                <div class="modal-facebook w3-center">
+                  <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+                </div><br>
+                <div class="modal-google w3-center">
+                  <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+                </div><br>
+                <hr><p class="w3-center font-weight-bold">OR</p><hr>
+                <form action="home.html" method="post">
+                  <input type="text" name="text" class="form-control" placeholder="Email / Username"><br>
+                  <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+                </form>
+                <div class="w3-row">
+                  <div class="w3-rest">
+                    <p>By joining I agree to receive emails from Saintly</p>
+                  </div>                      
+                </div>
+              </div>
+          
+              <footer class="w3-container w3-center">
+                <p>Already a member? <a href="#" class="w3-text-cyan reg1">back to Sign in</a></p>
+              </footer>
+            </div>
+
+            <div class="w3-modal-content loginbo w3-animate-zoom" style="max-width:380px">
+              <header class="w3-container"> 
+                <span onclick="document.getElementById('id02').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h4 class="w3-center w3-padding-16">Logging in to Saintly</h4>
+              </header>
+              <div class="w3-container">
+                <div class="modal-facebook w3-center">
+                  <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
+                </div><br>
+                <div class="modal-google w3-center">
+                  <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
+                </div>
+                <hr><p class="w3-center font-weight-bold">OR</p><hr>
+                <form action="home.html">
+                  <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
+                  <input type="password" name="password" class="form-control" placeholder="Password" required`><br>
+                  <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
+                </form>
+                <div class="w3-row">
+                  <div class="w3-half">
+                    <input type="checkbox" name="checkbox">  <label for="checkbox">Remember Me</label>
+                  </div>
+                  <div class="w3-rest pl-3">
+                    <a href="#" class="w3-text-cyan forgot" onclick="document.getElementById('id0l3').style.display='block'">Forgot Password?</a>
+                    
+                  </div>
+                </div><hr>
+              </div>
+              <footer class="w3-container w3-center">
+                <p>Not a member yet? <a href="#" class="w3-text-light-cyan log1">Join now</a></p>
+              </footer>
+            </div>
+                  <!-- FORGOT PASSWORD -->
+            <div class="container forgotpas w3-modal-content w3-animate-zoom w3-modal" style="max-width:380px; max-height: 320px;">
+              <header class="w3-container"> 
+                <span onclick="document.getElementById('id02').style.display='none'" 
+                class="w3-button w3-display-topright">&times;</span>
+                <h4 class="w3-center w3-padding-16 font-weight-bolder">Reset Passsword</h4>
+              </header>
+              <div class="w3-center">
+               <p>Please enter your email address and we will <br>
+              send you a link to reset your password</p>
+              <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
+              <input type="button" value="Submit" class="form-control w3-dark-cyan"><br>
+            </div><hr>
+            <footer class="w3-container w3-center">
+              <p>Back to <a href="#" class="w3-text-light-cyan log2">Sign in</a></p>
+            </footer>
+          </div>
+
+        </div>  
+      </div>
+      </div>
+   </nav>
+
+    <!-- MYSLIDESHOW -->
+
+    <div class="container-fluid" id="slide">
+      <div class="row">
+        <div class="col-md-6 col-12 text">
+          <h1 class="w3-text-white">Hire The Best <i>FreeLancing</i> Services For Your Business</h1>
+          <h3 class="w3-text-white">With our work-driven community of trusted <i>freelancers</i>.</h3>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Try 'web design' or 'video editing'">
+            <div class="input-group-append">
+              <button class="btn w3-light-cyan" type="submit">Get Started</button>
+            </div>
+          </div>
+          <div class="w3-container review-box4">
+            <h5 class="w3-text-white">Popular:</h5>
+            <ul>
+              <button class="btn btn-sm w3-text-white ">Logo Design</button>
+              <button class="btn btn-sm">Wordpress Developer</button>
+              <button class="btn btn-sm">Web Designer</button>
+              <button class="btn btn-sm">Articles/Blogs</button>
+            </ul>
+          </div>
+        
+        </div>
+       
+
+      </div>
+    </div>
+  </header>
+  <div id="nav2">
+       <div class="container-fluid bottom-nav">
+        <a href="web.html">Web Development</a>
+        <a href="marketing.html">Digital Marketing</a>
+        <a href="404.html">Programming & Tech</a>
+        <!-- <a href="#">Ghost Writing</a> -->
+        <a href="writing.html">Writing & Translation</a>
+        <a href="video.html">Video Editing</a>
+        <a href="graphics.html">Graphics Design</a>
+        <a href="404.html">Music & Audio</a>
+        <a href="404.html">Data Analyst</a>
+        <a href="404.html">Lifestyle</a>
+      </div>
+  </div>
+   <div id="side-menu" class="side-nav">
+    <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+    <a href="home.html" class="w3-bar-item w3-text-light-cyan">Home</a>
+    <a href="#" class="w3-bar-item">Saintly Pro</a>
+    <a href="#" class="w3-bar-item">Explore</a>
+    <a href="#" class="w3-bar-item" onclick="myAccFunc()">Categories <i class="fa fa-caret-down"></i></a>
+  <div id="demoAcc" class="w3-hide">
+    <a href="web.html" class="w3-bar-item">Web Development</a>
+    <a href="marketing.html" class="w3-bar-item">Digital Marketing</a>
+    <a href="#" class="w3-bar-item">Programming & Tech</a>
+    <a href="writing.html" class="w3-bar-item">Writing & Translation</a>
+    <a href="video.html" class="w3-bar-item">Video Editing</a>
+    <a href="graphics.html" class="w3-bar-item">Graphics Design</a>
+    <a href="#" class="w3-bar-item">Music & Audio</a>
+    <a href="#" class="w3-bar-item">Data Analyst</a>
+    <a href="#" class="w3-bar-item">Lifestyle/a>
+    </div>
+    <a href="#" class="w3-bar-item">Why Saintly <i class="fa fa-caret-down"></i></a>
+    <a href="#" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
+    <a href="#" class="w3-bar-item">Sign in</a>
+  </div>
+
+  			<!-- BRANDS -->
+	<div class="w3-container brands">
+		<h3 class="text-muted font-weight-bold pl-2"><span>Trusted By:</span></h3>
+      <ul>
+        <img src="img/microsoft.svg" alt="microsoft" class=" micro"> 
+			<img src="img/facebook-logo.svg" alt="Godaddy" class="facebook ">
+			<img src="img/logo-paypal.png" alt="Paypal" class="paypal img-fluid">
+			<img src="img/googlelogo.png" alt="Google" class="google img-fluid">
+      </ul>
+	</div>
+
+         <!-- ALL ABOUT SAINTLY -->
+
+  <div class="w3-container w3-sand all">
+		<div class="w3-row pt-5 pb-5">
+			<div class="w3-half w3-container w3-mobile">
+				<h2>A Market Place of <i>Freelancers</i></h2><br>
+				<ol style="list-style-type: square;">
+          <li>Budget Friendly</li>
+        </ol>
+        <p>Find high-quality services at every price point. No hourly rates, just project-based pricing.</p>
+        <ol style="list-style-type: square;">
+          <li>Quality work done quickly</li>
+        </ol>
+        <p>Find the right freelancer to begin working on your project within minutes.</p>
+        <ol style="list-style-type: square;">
+          <li>Protected payments, every time</li>
+        </ol>
+        <p>Always know what you'll pay upfront. Your payment isn't released until you approve the work.</p>
+         <ol style="list-style-type: square;">
+          <li class="disabled">24/7 support</li>
+        </ol>
+        <p>Unavailable for now</p>
+			</div>
+			<div class="w3-half">
+				<video id="video"controls loop class="w3-mobile ">
+					<source src="img/Online_Freelancing_Explained(720p).mp4" type="video/mp4">
+				</video>	 
+			</div>
+		</div>
+	</div>
+
+  	<!-- PROFESSIONAL SERVICES -->
+	<div class="w3-container mt-5">
+		<h3 class=" w3-mobile" id="tile">Saintly Popular Services</h3>
+		<a href="explore.html" class="w3-right sin-medium w3-text-cyan w3-hover-text-blue">See More...</a>
+	</div>
+	<div class="w3-container mt-5">
+		<div class="row">
+			<div class="col-lg-3 col-sm-3 w3-display-container">
+				<a href="web.html"><img src="img/web.jpg" alt="Logo" class="imr w3-hover-opacity w3-mobile"></a>
+				<p class="w3-display-topleft w3-container sin-medium w3-text-dark-white">Build Your Webite</p>
+				<p class="w3-display-cleft w3-container sin-xlarge w3-text-white">Web Development</p>
+			</div>
+			<div class="col-lg-3 col-sm-3 w3-display-container">
+				<a href="graphics.html"><img src="img/graphics.jpg" alt="Logo" class="imr w3-hover-opacity w3-mobile"></a>
+				<p class="w3-display-topleft w3-container sin-medium w3-text-dark-white">Build Your Designs</p>
+				<p class="w3-display-cleft w3-container sin-xlarge w3-text-white">Graphics Designer</p>
+			</div>
+			<div class="col-lg-3 col-sm-3 w3-display-container">
+				<a href="marketing.html"><img src="img/market.jpg" alt="Logo" class="imr w3-hover-opacity w3-mobile"></a>
+				<p class="w3-display-topleft w3-container sin-medium w3-text-dark-white">Expand Your Business</p>
+				<p class="w3-display-cleft w3-container sin-xlarge w3-text-white">Digital Marketing</p>
+			</div>
+			<div class="col-lg-3 col-sm-3 w3-display-container">
+				<a href="web.html"><img src="img/wp1.jpg" alt="Logo" class="imr w3-hover-opacity w3-mobile"></a>
+				<p class="w3-display-topleft w3-container sin-medium w3-text-dark-white">Customise Your Site</p>
+				<p class="w3-display-cleft w3-container sin-xlarge w3-text-dark-white">WordPress</p>
+			</div>
+		</div>
+	</div>
+          <!-- HOW IT WORKS -->
+  <div class="w3-center mt-5">
+    <h3 class="w3-xxlarge font-weight-bold w3-text-light-black" id="tile1">How It Works</h3>
+    <div class="mt-4">
+    <h5  class="w3-xlarge">Saintly helps to provide services to Clients and money to <i>Freelancers</i> </h5>
+    </div>
+  </div>
+  <div class="w3-container mt-5 w3-sand">
+    <div class="row w3-center work pt-5 pb-5">
+      <div class="w3-third w3-mobile w3-container">
+        <img src="img/download1-removebg-preview.png" alt="decision" class="img-fluid" id="img1">
+        <h5 class="w3-xlarge">1. Account</h5>
+        <p class="">Sign in, set up your profile and present your work to our clients.</p>
+      </div>
+      <div class="w3-third w3-mobile">
+        <img src="img/images_1-removebg-preview.png" alt="team" class="img-fluid" id="img1">
+        <h5 class="w3-xlarge">2. Notifications</h5>
+        <p class="">Get notified when an order is placed on your work and chat, negotiate privately with the client.</p>
+      </div>
+      <div class="w3-third w3-mobile">
+        <img src="img/vector-payment-icon-removebg-preview.png" alt="success" class="img-fluid" id="img1">
+        <h5 class="w3-xlarge">3. Payment</h5>
+        <p class="">Get paid on time when your work is verified by the client.</p>
+      </div>
+    </div>
+  </div>
+
+      <!-- FULL TEAM -->
+
+  <div class="w3-container mt-5">
+    <h3 class=" " id="tile">Develop Your Service Team</h3>
+  </div>
+  <div class="container-fluid mt-5 w3-sand">
+   <div class="container pb-5 pt-5">
+    <div class="row ">
+      <div class="col-lg-2 col-sm-3 ">
+        <p>Social</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Admin</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Growth</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Content</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Community</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Paid Ads</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-sm-3 w3-container">
+        <p>Email</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Copywriting</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Design</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Strategy</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>Public Relations</p>
+      </div>
+      <div class="col-lg-2 col-sm-3">
+        <p>SEO</p>
+      </div>
+    </div>
+   </div>
+  </div>
+  
+  <div class="container-fluid mt-5 start w3-light-grey">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 w3-content w3-center">
+        <h4>Join thousands of professionals using Saintly to run their <i>freelance</i> business</h4>
+      </div>
+      <div class="col-lg-6 col-sm-12 w3-content w3-center">
+        <button class="w3-btn w3-round register" id="join" onclick="document.getElementById('id02').style.display='block'">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+        <!-- TESTIMONIALS -->
+  <div class="w3-container mt-5">
+    <h3 class="w3-container w3-xxlarge font-weight-bold w3-text-light-black" id="tile">Success Stories</h3>
+  </div>
+
+  <div class="w3-container mt-5 test ">
+    <div class="row">
+       <ul class="w3-sand">
+        <img src="img/img2.jpg" alt="Christopher" class="img4 rounded-circle"> 
+          <div>
+            <h4 class=""><q>The <i>Freelance</i> talent connected to us by Saintly are more productive than we ever thought and the hardest part was picking one.</q></h4><br>
+            <h5 class="">Nwachukwu Daniel,</h5>
+            <h6 class="">Manager of Marketing, Aptech.</h6>
+          </div>
+       </ul>
+    </div>
+  </div>
+
+  <div class="w3-container mt-5 test ">
+    <div class="row">
+       <ul class="w3-sand">
+        <img src="img/img1.jpeg" alt="Christopher" class="img2 rounded-circle">
+          <div>
+            <h4><q>The trust between Clients and <i>Freelancers</i> grows stronger as more works increases.</q></h4><br>
+            <h5 class="">Aguguom Christopher,</h5>
+            <h6 class="">Independent Digital Marketer.</h6>
+          </div>
+       </ul>
+    </div>
+  </div>
+
+  <div class="w3-container avail mt-5">
+    <h3 id="tile">Get inspired with projects like these</h3>
+  </div>
+  <div class="w3-container mt-5">
+    <div class=" w3-row row">
+      <div class="w3-col l2 holder w3-container w3-display-container">
+        <a href="dashboard.html">
+          <img src="img/c.jpg"   href="#" alt="web" class="pic mySlides6">
+        <img src="img/c1.jpg"  href="#" alt="web" class="pic mySlides6">
+        <img src="img/c2.jpg"  href="#" alt="web" class="pic mySlides6">
+        </a>
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-topmiddle" style="width:100%">
+          <button class="w3-left w3-hover-text-khaki prev" onclick="plusDivs4(-1)">&#10094;</button>
+          <button class="w3-right w3-hover-text-khaki next" onclick="plusDivs4(1)">&#10095;</button>
+          <span class="w3-badge demo4 w3-border w3-transparent w3-hover-white" onclick="currentDiv4(1)"></span>
+          <span class="w3-badge demo4 w3-border w3-transparent w3-hover-white" onclick="currentDiv4(2)"></span>
+          <span class="w3-badge demo4 w3-border w3-transparent w3-hover-white" onclick="currentDiv4(3)"></span>
+        </div>
+        <img src="img/user-2.png" alt="profile" class="img-fluid rounded-circle down-pic">
+        <h5>Sinclair</h5>
+        <small>Top rated</small>
+        <p>A  anime illustrator</p>
+        <b>
+          <i class="fa fa-star w3-gold ml-2 mb-1"></i> 5.0
+        </b><hr>
+        <i class="fa fa-heart w3-text-pink"></i>
+        <h6>From <strong>$200</strong></h6>
+      </div>
+
+      <div class="w3-col l2 holder w3-container w3-display-container">
+        <a href="dashboard.html">
+          <img src="img/web5.jpg" alt="web" class="pic mySlides1">
+          <img src="img/web6.png" alt="web" class="pic mySlides1">
+        <img src="img/web7.png" alt="web" class="pic mySlides1">
+      </a>  
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-topmiddle" style="width:100%">
+          <button class="w3-left w3-hover-text-khaki prev" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-right w3-hover-text-khaki next" onclick="plusDivs(1)">&#10095;</button>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+          <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+        <img src="img/user-2.png" alt="profile" class="img-fluid rounded-circle down-pic">
+        <h5>Sinclair</h5>
+        <small>Top rated</small>
+        <p>I will design a responsive website</p>
+        <b>
+          <i class="fa fa-star w3-gold ml-2 mb-1"></i> 5.0
+        </b><hr>
+        <i class="fa fa-heart w3-text-pink"></i>
+        <h6>From <strong>$200</strong></h6>
+      </div>
+
+        <div class="w3-col l2 holder w3-container w3-display-container">
+          <img src="img/lan4.jpg"   href="#" alt="web" class="pic mySlid4">
+          <img src="img/lan5.jpg"  href="#" alt="web" class="pic mySlid4">
+          <img src="img/lan6.jpg"  href="#" alt="web" class="pic mySlid4">
+          <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-topmiddle" style="width:100%">
+            <button class="w3-left w3-hover-text-khaki prev" onclick="plusDi4(-1)">&#10094;</button>
+            <button class="w3-right w3-hover-text-khaki next" onclick="plusDi4(1)">&#10095;</button>
+            <span class="w3-badge dem4 w3-border w3-transparent w3-hover-white" onclick="currentDi4(1)"></span>
+            <span class="w3-badge dem4 w3-border w3-transparent w3-hover-white" onclick="currentDi4(2)"></span>
+            <span class="w3-badge dem4 w3-border w3-transparent w3-hover-white" onclick="currentDi4(3)"></span>
+          </div>
+          <img src="img/user-2.png" alt="profile" class="img-fluid rounded-circle down-pic">
+          <h5>Sinclair</h5>
+          <small>Top rated</small>
+          <p>I will translate Japanese manga to English</p>
+          <b>
+            <i class="fa fa-star w3-gold ml-2 mb-1"></i> 5.0
+          </b><hr>
+          <i class="fa fa-heart w3-text-pink"></i>
+          <h6>From <strong>$20</strong></h6>
+        </div>
+
+        <div class="w3-col l2 holder w3-container w3-display-container">
+          <a href="dashboard.html">
+            <img src="img/php.jpg"   href="#" alt="web" class="pic mySlides4">
+          <img src="img/php1.jpg"  href="#" alt="web" class="pic mySlides4">
+          <img src="img/php2.png"  href="#" alt="web" class="pic mySlides4">
+          </a>
+          <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-topmiddle" style="width:100%">
+            <button class="w3-left w3-hover-text-khaki prev" onclick="plusDivs2(-1)">&#10094;</button>
+            <button class="w3-right w3-hover-text-khaki next" onclick="plusDivs2(1)">&#10095;</button>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv2(1)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv2(2)"></span>
+            <span class="w3-badge demo2 w3-border w3-transparent w3-hover-white" onclick="currentDiv2(3)"></span>
+          </div>
+          <img src="img/d1.jpeg" alt="profile" class="img-fluid rounded-circle down-pic">
+          <h5>Kenna Jim</h5>
+          <small>Level 2</small>
+          <p>I will build your website with Php</p>
+          <b>
+            <i class="fa fa-star w3-gold ml-2 mb-1"></i> 5.0
+          </b><hr>
+          <i class="fa fa-heart w3-text-pink"></i>
+          <h6>From <strong>$90</strong></h6>
+        </div>
+        </div>
+      </div>
+
+  <footer class="footer mt-5">
+      <!-- FOR SMALL SCREEN -->
+    <div class="w3-container pt-3 accordion">
+      <div id="accordion" class="pt-2">
+        <a href="#collapseone" class="w3-large w3-text-white" data-toggle="collapse">Categories    <i class="fa fa-caret-down"></i></a>
+        <div id="collapseone" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="">
+                <a href="web.html">Web Development</a>
+                <a href="marketing.html">Digital Marketing</a>
+                <a href="404.html">Programming & Tech</a>
+                <a href="writing.html">Writing & Translation</a>
+                <a href="video.html">Video Editor</a>
+                <a href="graphics.html">Graphics Design</a>
+                <a href="404.html">Music & Audio</a>
+                <a href="404.html">Data Analyst</a>
+                <a href="404.html">Lifestyle</a>
+            </ul>
+          </div>
+        </div>				
+      </div>
+      <div id="accordion" class="pt-2">
+        <a href="#collapsetwo" class="w3-large w3-text-white" data-toggle="collapse">For Clients   <i class="fa fa-caret-down"></i></a>
+        <div id="collapsetwo" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="">
+              <a href="404.html">How to hire</a><br>
+              <a href="404.html">Marketplace</a><br>
+              <a href="404.html">Projects</a><br>
+              <a href="404.html">Direct Contracts</a><br>
+            </ul>
+          </div>
+        </div>				
+      </div>
+      <div id="accordion" class="pt-2">
+        <a href="#collapsethree" class="w3-large w3-text-white" data-toggle="collapse">Support   <i class="fa fa-caret-down"></i></a>
+        <div id="collapsethree" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="">
+              <a href="404.html">Help and Support</a><br>
+              <a href="404.html">Trust and Safety</a><br>
+              <a href="404.html">Buying on Saintly</a><br>
+              <a href="404.html">Selling on Saintly</a><br>
+            </ul>
+          </div>
+        </div>				
+      </div>
+      <div id="accordion" class="pt-2">
+        <a href="#collapsefour" class="w3-large w3-text-white" data-toggle="collapse">Company   <i class="fa fa-caret-down"></i></a>
+        <div id="collapsefour" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="">
+              <a href="404.html">Careers</a><br>
+              <a href="404.html">Patnerships</a><br>
+              <a href="404.html">About Us</a><br>
+              <a href="404.html">Privacy Policy</a><br>
+              <a href="404.html">Terms of Service</a><br>
+            </ul>
+          </div>
+        </div>				
+      </div>
+    </div>
+          <!-- FOR LARGE SCREEN -->
+    <div class="container fot">
+      <div class="row">
+        <div class="col-lg-3 pt-5">
+          <h4>Categories</h4>
+              <a href="web.html">Web Development</a><br>
+            <a href="marketing.html">Digital Marketing</a><br>
+            <a href="404.html">Programming & Tech</a><br>
+            <a href="writing.html">Writing & Translation</a><br>
+            <a href="video.html">Video Editor</a><br>
+            <a href="graphics.html">Graphics Design</a><br>
+            <a href="404.html">Music & Audio</a><br>
+            <a href="404.html">Data Analyst</a><br>
+            <a href="404.html">Lifestyle</a>
+        </div>
+        <div class="col-lg-3 pt-5">
+          <h4>For Clients</h4>
+          <a href="404.html">How to hire</a><br>
+          <a href="404.html">Marketplace</a><br>
+          <a href="404.html">Projects</a><br>
+          <a href="404.html">Direct Contracts</a><br>
+        </div>
+        <div class="col-lg-3 pt-5">
+          <h4>Support</h4>
+          <a href="404.html">Help and Support</a><br>
+          <a href="404.html">Trust and Safety</a><br>
+          <a href="404.html">Buying on Saintly</a><br>
+          <a href="404.html">Selling on Saintly</a><br>
+        </div>
+        <div class="col-lg-3 pt-5">
+          <h4>Company</h4>
+          <a href="404.html">Careers</a><br>
+          <a href="404.html">Patnerships</a><br>
+          <a href="about.html">About Us</a><br>
+          <a href="404.html">Privacy Policy</a><br>
+          <a href="terms.html">Terms of Service</a><br>
+        </div>
+      </div>
+    </div><hr>
+    <div class="w3-container">
+      <div class="row foote">
+        <div class="col-md-6 col-sm-12">
+          <a href="#"><img src="img/saint2.png" alt="logo" class="img-fluid img" title="Saintly"></a>
+         <!-- <div class="col-sm-12 col-6"> -->
+          <span class="pl-3 w3-text-white w3-mobile"> &copy; Saintly International Ltd.2021</span>
+         <!-- </div> -->
+        </div>
+        <div class="col-md-6 text-right col-sm-12">
+         <ul>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+         </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#home" class="scroll-link top-link">
+		<i class="fas fa-arrow-up"></i>
+	</a>
+</body>
+  <script type="text/javascript" src="dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="dist/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="dist/js/all.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.bundle.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/home.js"></script>
+  <script type="text/javascript" src="js/graphics.js"></script>
+  <script type="text/javascript" src="js/writing.js"></script>
+  <script type="text/javascript" src="js/marketing.js"></script>
+  <script type="text/javascript" src="js/web.js"></script>
+  <script>
+   
+    //WEB DEVELOPMENT
+//2ND SLIDE
+
+//1ST SLIDE
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides1");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+//3RD SLIDE
+var slideIndex = 1;
+showDivs2(slideIndex);
+
+function plusDivs2(n) {
+  showDivs2(slideIndex += n);
+}
+
+function currentDiv2(n) {
+  showDivs2(slideIndex = n);
+}
+
+function showDivs2(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides4");
+  var dots = document.getElementsByClassName("demo2");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+  </script>
+</html>

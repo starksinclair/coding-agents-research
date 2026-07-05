@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>javascript form</title>
+  <link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<style>
+  .container .gallery embed{
+    margin: 20px;
+  }
+</style>
+<body>
+<div class="container">
+    <form id="form-upload-file" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>fullname</label>
+        <input type="text" name="" id="name" class="form-control">
+      </div>
+      <div id="name_error" class="val_error"></div>
+      <div class="form-group">
+        <label>email</label>
+        <input type="email" name="" id="email" class="form-control">
+      </div>
+      <div id="email_error" class="val_error"></div> 
+      <div class="form-group">
+        <label>password</label>
+        <input type="password" name="" id="password" class="form-control">
+      </div>
+      <div id="password_error" class="val_error"></div>
+      <div class="form-group">
+        <label>confirm password</label>
+        <input type="password" name="" id="conpassword" class="form-control">
+      </div>
+      <div id="conpassword_error" class="val_error"></div>
+      <div class="form-group">
+        <label>choose pictures</label>                    
+        <input type="file" id="gallery-photo-add" multiple="" name="file[]"/>
+      </div>
+      <div id="pic_error" class="val_error"></div>
+      <div class="form-group">
+        <button class="btn btn-success">submit</button>
+      </div>            
+    </form>
+    <div class="container">
+      <div class="col-md-12">
+          <div class="gallery"></div>
+      </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript" src="../dist/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../dist/js/bootstrap.js"></script>
+<script src="/js/app1.js"></script>
+</body>
+</html>
