@@ -718,65 +718,53 @@
   <script type="text/javascript" src="js/marketing.js"></script>
   <script type="text/javascript" src="js/web.js"></script>
   <script>
-   
-    //WEB DEVELOPMENT
-//2ND SLIDE
+    // Each "Get inspired" carousel keeps its own index so advancing one
+    // carousel no longer disturbs the others. These definitions load last and
+    // intentionally override the shared-state versions from the external JS files.
+    function makeCarousel(slideClass, dotClass) {
+      var index = 1;
 
-//1ST SLIDE
-var slideIndex = 1;
-showDivs(slideIndex);
+      function show(n) {
+        var slides = document.getElementsByClassName(slideClass);
+        var dots = document.getElementsByClassName(dotClass);
+        if (!slides.length) return;
+        if (n > slides.length) { index = 1; }
+        else if (n < 1) { index = slides.length; }
+        else { index = n; }
+        for (var i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (var j = 0; j < dots.length; j++) {
+          dots[j].className = dots[j].className.replace(" w3-white", "");
+        }
+        slides[index - 1].style.display = "block";
+        if (dots[index - 1]) {
+          dots[index - 1].className += " w3-white";
+        }
+      }
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+      show(index);
+      return {
+        plus: function (n) { show(index + n); },
+        current: function (n) { show(n); }
+      };
+    }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
+    var carouselA = makeCarousel("mySlides6", "demo4");
+    var carouselB = makeCarousel("mySlides1", "demo");
+    var carouselC = makeCarousel("mySlid4", "dem4");
+    var carouselD = makeCarousel("mySlides4", "demo2");
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides1");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
+    function plusDivs4(n) { carouselA.plus(n); }
+    function currentDiv4(n) { carouselA.current(n); }
 
-//3RD SLIDE
-var slideIndex = 1;
-showDivs2(slideIndex);
+    function plusDivs(n) { carouselB.plus(n); }
+    function currentDiv(n) { carouselB.current(n); }
 
-function plusDivs2(n) {
-  showDivs2(slideIndex += n);
-}
+    function plusDi4(n) { carouselC.plus(n); }
+    function currentDi4(n) { carouselC.current(n); }
 
-function currentDiv2(n) {
-  showDivs2(slideIndex = n);
-}
-
-function showDivs2(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides4");
-  var dots = document.getElementsByClassName("demo2");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-
+    function plusDivs2(n) { carouselD.plus(n); }
+    function currentDiv2(n) { carouselD.current(n); }
   </script>
 </html>
