@@ -104,6 +104,9 @@ carousel();
 function carousel() {
   var i;
   var x = document.getElementsByClassName("myslideshow");
+  if (x.length === 0) {
+    return;
+  }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
