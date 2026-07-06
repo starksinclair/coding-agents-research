@@ -1,119 +1,47 @@
+var carouselMarketing1 = createCarousel("mySlid", "dem");
+var carouselMarketing2 = createCarousel("mySlid1", "dem1");
+var carouselMarketing3 = createCarousel("mySlid2", "dem2");
+var carouselMarketing4 = createCarousel("mySlid3", "dem3");
 
-//1ST SLIDER
+function plusDi(n) {
+  carouselMarketing1.plus(n);
+}
+function currentDiv7(n) {
+  carouselMarketing1.current(n);
+}
+function showDi(n) {
+  carouselMarketing1.current(n);
+}
 
-var slideIndex = 1;
- showDi(slideIndex);
- 
- function plusDi(n) {
-   showDi(slideIndex += n);
- }
- 
- function currentDiv7(n) {
-   showDi(slideIndex = n);
- }
- 
- function showDi(n) {
-   var i;
-   var x = document.getElementsByClassName("mySlid");
-   var dots = document.getElementsByClassName("dem");
-   if (n > x.length) {slideIndex = 1}
-   if (n < 1) {slideIndex = x.length}
-   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-   }
-   for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
-   }
-   x[slideIndex-1].style.display = "block";  
-   dots[slideIndex-1].className += " w3-white";
- }
+function plusDi1(n) {
+  carouselMarketing2.plus(n);
+}
+function currentDi1(n) {
+  carouselMarketing2.current(n);
+}
+function showDi1(n) {
+  carouselMarketing2.current(n);
+}
 
-//2ND SLIDER
-var slideIndex = 1;
- showDi1(slideIndex);
- 
- function plusDi1(n) {
-   showDi1(slideIndex += n);
- }
- 
- function currentDi1(n) {
-   showDi1(slideIndex = n);
- }
- 
- function showDi1(n) {
-   var i;
-   var x = document.getElementsByClassName("mySlid1");
-   var dots = document.getElementsByClassName("dem1")
-   ;
-   if (n > x.length) {slideIndex = 1}
-   if (n < 1) {slideIndex = x.length}
-   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-   }
-   for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
-   }
-   x[slideIndex-1].style.display = "block";  
-   dots[slideIndex-1].className += " w3-white";
- }
+function plusDi2(n) {
+  carouselMarketing3.plus(n);
+}
+function currentDi2(n) {
+  carouselMarketing3.current(n);
+}
+function showDi2(n) {
+  carouselMarketing3.current(n);
+}
 
- //3RD SLIDER
- var slideIndex = 1;
- showDi2(slideIndex);
- 
- function plusDi2(n) {
-   showDi2(slideIndex += n);
- }
- 
- function currentDi2(n) {
-   showDi2(slideIndex = n);
- }
- 
- function showDi2(n) {
-   var i;
-   var x = document.getElementsByClassName("mySlid2");
-   var dots = document.getElementsByClassName("dem2")
-   ;
-   if (n > x.length) {slideIndex = 1}
-   if (n < 1) {slideIndex = x.length}
-   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-   }
-   for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
-   }
-   x[slideIndex-1].style.display = "block";  
-   dots[slideIndex-1].className += " w3-white";
- }
-
- //4TH SLIDER
- var slideIndex = 1;
- showDi3(slideIndex);
- 
- function plusDi3(n) {
-   showDi3(slideIndex += n);
- }
- 
- function currentDi3(n) {
-   showDi3(slideIndex = n);
- }
- 
- function showDi3(n) {
-   var i;
-   var x = document.getElementsByClassName("mySlid3");
-   var dots = document.getElementsByClassName("dem3")
-   ;
-   if (n > x.length) {slideIndex = 1}
-   if (n < 1) {slideIndex = x.length}
-   for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-   }
-   for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-white", "");
-   }
-   x[slideIndex-1].style.display = "block";  
-   dots[slideIndex-1].className += " w3-white";
- }
+function plusDi3(n) {
+  carouselMarketing4.plus(n);
+}
+function currentDi3(n) {
+  carouselMarketing4.current(n);
+}
+function showDi3(n) {
+  carouselMarketing4.current(n);
+}
 
  // FOR HIDE/SHOW FORM
  $(function () {

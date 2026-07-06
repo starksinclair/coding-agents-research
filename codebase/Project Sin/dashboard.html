@@ -617,8 +617,11 @@
 <script type="text/javascript" src="dist/js/all.js"></script>
 
 <!-- <script type="text/javascript" src="/js/home.js"></script> -->
+<script type="text/javascript" src="js/carousel.js"></script>
 <script type="text/javascript" src="/js/video.js"></script>
 <script>
+  var carouselDashboard = createCarousel("Slides", "demoes", " w3-opacity-off");
+
   function openSlideMenu() {
     document.getElementById('side-menu').style.width = '250px';
     document.getElementById('main').style.marginLeft = '250px';
@@ -659,31 +662,11 @@
   });
 
   function currentsDiv(n) {
-    showsDivs(slideIndex = n);
+    carouselDashboard.current(n);
   }
 
   function plusDivs(n) {
-    showsDivs(slideIndex += n);
-  }
-
-  function showsDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("Slides");
-    var dots = document.getElementsByClassName("demoes");
-    if (n > x.length) {
-      slideIndex = 1
-    }
-    if (n < 1) {
-      slideIndex = x.length
-    }
-    for (i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-    }
-    x[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " w3-opacity-off";
+    carouselDashboard.plus(n);
   }
 </script>
 
