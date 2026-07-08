@@ -4,7 +4,7 @@
  * @return {number}
  */
 function countSeniors(details) {
-  // Tool places solution here
+  return details.filter((d) => parseInt(d.slice(11, 13), 10) > 60).length;
 }
 
 module.exports = { countSeniors };
