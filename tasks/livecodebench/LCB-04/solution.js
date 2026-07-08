@@ -4,7 +4,21 @@
  * @return {number}
  */
 function matrixSum(nums) {
-  // Tool places solution here
+  for (const row of nums) {
+    row.sort((a, b) => a - b);
+  }
+
+  let score = 0;
+  const cols = nums[0].length;
+  for (let col = cols - 1; col >= 0; col--) {
+    let roundMax = 0;
+    for (const row of nums) {
+      roundMax = Math.max(roundMax, row[col]);
+    }
+    score += roundMax;
+  }
+
+  return score;
 }
 
 module.exports = { matrixSum };
