@@ -1,5 +1,5 @@
 prompts/
-tasks/
+# tasks/
 scripts/
 .DS_Store
 .gitignore
