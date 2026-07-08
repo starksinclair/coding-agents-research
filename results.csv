@@ -11,3 +11,4 @@ timestamp,task_id,tool,context_level,attempt,iterations,functional,no_regression
 2026-07-08T00:36:49Z,LCB-02,cursor,minimum,1,1,pass,pass,pass,pass,,experiments/cursor/LCB-02-attempt-1,a218308,unknown,"ran successfully"
 2026-07-08T00:53:11Z,LCB-03,cursor,minimum,1,1,pass,pass,pass,pass,,experiments/cursor/LCB-03-attempt-1,100a19c,"as the problem gets harder, the ai tool takes longer to come up a solution, and it even searches online, an recogizes that it's a leetcode problem",""
 2026-07-08T01:02:20Z,LCB-04,cursor,minimum,1,1,pass,pass,pass,pass,,experiments/cursor/LCB-04-attempt-1,1a35efe,unknown,""
+2026-07-08T01:08:10Z,LCB-05,cursor,minimum,1,1,pass,pass,pass,pass,,experiments/cursor/LCB-05-attempt-1,2b75b3b,unknown,""
