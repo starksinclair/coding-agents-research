@@ -36,8 +36,8 @@
               <a href="about.html" class="w3-bar-item">About Saintly</a>
               <a href="#" class="w3-bar-item"><i class="fa fa-language"></i> English</a>
             </ul>
-            <a href="#" class="w3-bar-item" id="sign-in" onclick="document.getElementById('id01').style.display='block'">Sign in</a>
-            <button class="w3-btn w3-bar-item register" id="join" onclick="document.getElementById('id02').style.display='block'">Join</button>
+            <a href="#" class="w3-bar-item" id="sign-in" onclick="openAuthModal('id01')">Sign in</a>
+            <button class="w3-btn w3-bar-item register" id="join" onclick="openAuthModal('id02')">Join</button>
             <!-- <div class="w3-dropdown-hover">
             <i class="fa fa-user-circle"></i>
             <div class="w3-dropdown-content w3-bar-block w3-border">
@@ -47,182 +47,8 @@
             </div>
             </div> -->
 
-<!-- THE MODAL -->
-
-            <div id="id01" class="w3-modal">
-              <div class="w3-modal-content loginbox w3-animate-zoom" style="max-width:380px">
-                <header class="w3-container"> 
-                  <span onclick="document.getElementById('id01').style.display='none'" 
-                  class="w3-button w3-display-topright">&times;</span>
-                  <h4 class="w3-center w3-padding-16">Logging in to Saintly</h4>
-                </header>
-                <div class="w3-container">
-                  <div class="modal-facebook w3-center">
-                    <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
-                  </div><br>
-                  <div class="modal-google w3-center">
-                    <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
-                  </div>
-                  <hr><p class="w3-center font-weight-bold">OR</p><hr>
-                  <form action="home.html">
-                    <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
-                    <input type="password" name="password" class="form-control" placeholder="Password" required><br>
-                    <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
-                  </form>
-                  <div class="w3-row">
-                    <div class="w3-half">
-                      <input type="checkbox" name="checkbox">  <label for="checkbox">Remember Me</label>
-                    </div>
-                    <div class="w3-rest pl-3">
-                      <a href="#" class="w3-text-cyan forgot" onclick="document.getElementById('id0l4').style.display='block'">Forgot Password?</a>
-                      
-                    </div>
-                  </div><hr>
-                </div>
-                <footer class="w3-container w3-center">
-                  <p>Not a member yet? <a href="#" class="w3-text-light-cyan log">Join now</a></p>
-                </footer>
-              </div>
-
-
-              <div class="w3-modal-content registerbox w3-animate-zoom" style="max-width:380px">
-        
-            <header class="w3-container">
-              <span onclick="document.getElementById('id01').style.display='none'"
-              class="w3-button w3-display-topright">&times;</span>
-              <h4 class="w3-center w3-padding-16">Signing up to Saintly</h4>
-            </header>
-        
-            <div class="w3-container">
-              <div class="modal-facebook w3-center">
-                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
-              </div><br>
-              <div class="modal-google w3-center">
-                <a href="#"><img src="img/download2-removebg-preview.png" alt=""></i> Continue with Google</a>
-              </div><br>
-              <hr><p class="w3-center font-weight-bold">OR</p><hr>
-              <form action="home.html" method="post">
-                <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
-                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
-              </form>
-              <div class="w3-row">
-                <div class="w3-rest">
-                  <p>By joining I agree to receive emails from Saintly</p>
-                </div>                      
-              </div>
-            </div>
-        
-            <footer class="w3-container w3-center">
-              <p>Already a member? <a href="#" class="w3-text-cyan reg">back to Sign in</a></p>
-            </footer>
-          </div>
-                   <!-- FORGOT PASSWORD -->
-         <!-- <div class="w3-modal" id="idol4"> -->
-          <div class="container forgotpas w3-modal-content w3-animate-zoom w3-modal" style="max-width:380px; max-height: 320px;">
-            <header class="w3-container"> 
-              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright cls">&times;</span>
-              <h4 class="w3-center w3-padding-16 font-weight-bolder">Reset Passsword</h4>
-            </header>
-            <div class="w3-center">
-             <p>Please enter your email address and we will <br>
-            send you a link to reset your password</p>
-            <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
-            <input type="button" value="Submit" class="form-control w3-dark-cyan"><br>
-          </div><hr>
-          <footer class="w3-container w3-center">
-            <p>Back to <a href="#" class="w3-text-light-cyan log3">Sign in</a></p>
-          </footer>
-        </div>
-      <!-- </div> -->
-        </div>
-
-      <!-- SIGN UP  -->
-            
-        <div id="id02" class="w3-modal">
-          <div class="w3-modal-content registerbo w3-animate-zoom" style="max-width:380px">
-        
-            <header class="w3-container">
-              <span onclick="document.getElementById('id02').style.display='none'"
-              class="w3-button w3-display-topright">&times;</span>
-              <h4 class="w3-center w3-padding-16">Signing up to Saintly</h4>
-            </header>
-        
-            <div class="w3-container">
-              <div class="modal-facebook w3-center">
-                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
-              </div><br>
-              <div class="modal-google w3-center">
-                <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
-              </div><br>
-              <hr><p class="w3-center font-weight-bold">OR</p><hr>
-              <form action="home.html" method="post">
-                <input type="text" name="text" class="form-control" placeholder="Email / Username"><br>
-                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
-              </form>
-              <div class="w3-row">
-                <div class="w3-rest">
-                  <p>By joining I agree to receive emails from Saintly</p>
-                </div>                      
-              </div>
-            </div>
-        
-            <footer class="w3-container w3-center">
-              <p>Already a member? <a href="#" class="w3-text-cyan reg1">back to Sign in</a></p>
-            </footer>
-          </div>
-
-          <div class="w3-modal-content loginbo w3-animate-zoom" style="max-width:380px">
-            <header class="w3-container"> 
-              <span onclick="document.getElementById('id02').style.display='none'" 
-              class="w3-button w3-display-topright">&times;</span>
-              <h4 class="w3-center w3-padding-16">Logging in to Saintly</h4>
-            </header>
-            <div class="w3-container">
-              <div class="modal-facebook w3-center">
-                <a href="#"><i class="fab fa-facebook w3-left"></i> Continue with Facebook</a>
-              </div><br>
-              <div class="modal-google w3-center">
-                <a href="#"><img src="img/download2-removebg-preview.png" alt=""> Continue with Google</a>
-              </div>
-              <hr><p class="w3-center font-weight-bold">OR</p><hr>
-              <form action="home.html">
-                <input type="text" name="text" class="form-control" placeholder="Email / Username" required><br>
-                <input type="password" name="password" class="form-control" placeholder="Password" required`><br>
-                <input type="submit" value="Continue" class="form-control w3-dark-cyan"><br>
-              </form>
-              <div class="w3-row">
-                <div class="w3-half">
-                  <input type="checkbox" name="checkbox">  <label for="checkbox">Remember Me</label>
-                </div>
-                <div class="w3-rest pl-3">
-                  <a href="#" class="w3-text-cyan forgot" onclick="document.getElementById('id0l3').style.display='block'">Forgot Password?</a>
-                  
-                </div>
-              </div><hr>
-            </div>
-            <footer class="w3-container w3-center">
-              <p>Not a member yet? <a href="#" class="w3-text-light-cyan log1">Join now</a></p>
-            </footer>
-          </div>
-                <!-- FORGOT PASSWORD -->
-          <div class="container forgotpas w3-modal-content w3-animate-zoom w3-modal" style="max-width:380px; max-height: 320px;">
-            <header class="w3-container"> 
-              <span onclick="document.getElementById('id02').style.display='none'" 
-              class="w3-button w3-display-topright">&times;</span>
-              <h4 class="w3-center w3-padding-16 font-weight-bolder">Reset Passsword</h4>
-            </header>
-            <div class="w3-center">
-             <p>Please enter your email address and we will <br>
-            send you a link to reset your password</p>
-            <input type="email" name="email" class="form-control" placeholder="Enter your Email"><br>
-            <input type="button" value="Submit" class="form-control w3-dark-cyan"><br>
-          </div><hr>
-          <footer class="w3-container w3-center">
-            <p>Back to <a href="#" class="w3-text-light-cyan log2">Sign in</a></p>
-          </footer>
-        </div>
-
-      </div>  
+<!-- THE MODAL (loaded via auth-modals.js) -->
+<div id="auth-modals-mount"></div>  
         </div>
         <!-- <div class="w3-content search-bar">
           <input type="search" name="search" id="input" class="form-control" placeholder="Hire Services">
@@ -1069,12 +895,14 @@
 		<i class="fas fa-arrow-up"></i>
 	</a>
 </body>
-  <script type="text/javascript" src="dist/js/bootstrap.js"></script>
-	<script type="text/javascript" src="dist/js/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="dist/js/all.js"></script>
-	<script type="text/javascript" src="dist/js/bootstrap.bundle.js"></script>
+  <script type="text/javascript" src="dist/js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="dist/js/all.js"></script>
+	
+  <script type="text/javascript" src="js/auth-modals.js"></script>
+  <script type="text/javascript" src="js/auth-validation.js"></script>
   <script type="text/javascript" src="js/home.js"></script>
+  <script type="text/javascript" src="js/carousel.js"></script>
   <script type="text/javascript" src="js/graphics.js"></script>
   <script type="text/javascript" src="js/marketing.js"></script>
   <script type="text/javascript" src="js/writing.js"></script>

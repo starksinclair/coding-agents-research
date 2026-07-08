@@ -75,7 +75,6 @@ read -r -p "Notes (optional): " NOTES
 TIMESTAMP="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo 'unknown')"
 COMMIT="$(git rev-parse --short HEAD 2>/dev/null || echo 'unknown')"
-BASE_COMMIT="$(git merge-base HEAD main 2>/dev/null || echo 'unknown')"
 
 OVERALL="pass"
 for axis in "$FUNCTIONAL" "$REGRESSIONS" "$CONSTRAINTS"; do
@@ -97,7 +96,6 @@ echo "  Constraints:  $CONSTRAINTS"
 echo "  Overall:      $OVERALL"
 echo "  Failure type: ${FAILURE_TYPE:-—}"
 echo "  Branch:       $BRANCH ($COMMIT)"
-echo "  Base commit:  $BASE_COMMIT"
 echo "  Notes:        ${NOTES:-—}"
 echo "───────────────────────────────────────────────────"
 read -r -p "Write this row? [Y/n] " confirm
@@ -109,7 +107,7 @@ fi
 # ---- header if file doesn't exist ------------------------------------------
 
 if [ ! -f "$RESULTS_FILE" ]; then
-  echo "timestamp,task_id,tool,context_level,attempt,iterations,functional,no_regressions,constraints_met,overall,failure_type,branch,commit,base_commit,notes" > "$RESULTS_FILE"
+  echo "timestamp,task_id,tool,context_level,attempt,iterations,functional,no_regressions,constraints_met,overall,failure_type,branch,commit,notes" > "$RESULTS_FILE"
 fi
 
 # ---- duplicate guard -------------------------------------------------------
@@ -122,6 +120,6 @@ fi
 
 # ---- append ----------------------------------------------------------------
 
-echo "${TIMESTAMP},${TASK_ID},${TOOL},${CONTEXT},${ATTEMPT},${ITERATIONS},${FUNCTIONAL},${REGRESSIONS},${CONSTRAINTS},${OVERALL},${FAILURE_TYPE},${BRANCH},${COMMIT},${BASE_COMMIT},$(esc "$NOTES")" >> "$RESULTS_FILE"
+echo "${TIMESTAMP},${TASK_ID},${TOOL},${CONTEXT},${ATTEMPT},${ITERATIONS},${FUNCTIONAL},${REGRESSIONS},${CONSTRAINTS},${OVERALL},${FAILURE_TYPE},${BRANCH},${COMMIT},$(esc "$NOTES")" >> "$RESULTS_FILE"
 
 echo "✔ Logged: ${TASK_ID} | ${TOOL} | ${CONTEXT} | attempt ${ATTEMPT} | ${ITERATIONS} iter | overall: ${OVERALL}"
