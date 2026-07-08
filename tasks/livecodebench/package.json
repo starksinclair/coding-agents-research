@@ -1,0 +1,19 @@
+{
+  "name": "lcb-tasks",
+  "version": "1.0.0",
+  "description": "LiveCodeBench experiment tasks for coding agents study",
+  "scripts": {
+    "test": "jest --testPathPattern='tests/solution.test.js' --verbose",
+    "test:lcb01": "jest LCB-01 --verbose",
+    "test:lcb02": "jest LCB-02 --verbose",
+    "test:lcb03": "jest LCB-03 --verbose",
+    "test:lcb04": "jest LCB-04 --verbose",
+    "test:lcb05": "jest LCB-05 --verbose",
+    "test:lcb06": "jest LCB-06 --verbose",
+    "test:lcb07": "jest LCB-07 --verbose",
+    "test:lcb08": "jest LCB-08 --verbose"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
