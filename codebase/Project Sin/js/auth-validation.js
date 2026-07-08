@@ -66,11 +66,20 @@
     return valid;
   }
 
-  $(function () {
+  function initAuthValidation() {
     var formSelector =
       ".loginbox form, .loginbo form, .registerbox form, .registerbo form";
 
     $(formSelector).attr("novalidate", "novalidate");
+  }
+
+  $(function () {
+    var formSelector =
+      ".loginbox form, .loginbo form, .registerbox form, .registerbo form";
+
+    initAuthValidation();
+
+    $(document).on("auth-modals:loaded", initAuthValidation);
 
     $(document).on("submit", formSelector, function (e) {
       if (!validateForm($(this))) {
