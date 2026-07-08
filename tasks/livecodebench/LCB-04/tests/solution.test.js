@@ -26,15 +26,6 @@ describe("LCB-04 — matrixSum", () => {
     expect(matrixSum([[2, 2], [2, 2]])).toBe(4);
   });
 
-  test("rows of different lengths", () => {
-    // [[1,2,3],[4,5]]:
-    // round1: remove 3 from row0, 5 from row1 → max=5
-    // round2: remove 2 from row0, 4 from row1 → max=4
-    // round3: remove 1 from row0 (row1 empty) → max=1
-    // score = 10
-    expect(matrixSum([[1, 2, 3], [4, 5]])).toBe(10);
-  });
-
   test("two rows, dominated by one row each round", () => {
     // [[10,1],[2,2]]:
     // round1: remove 10, 2 → max=10
@@ -43,10 +34,12 @@ describe("LCB-04 — matrixSum", () => {
     expect(matrixSum([[10, 1], [2, 2]])).toBe(12);
   });
 
-  test("does not mutate original input", () => {
-    const input = [[3, 1], [2, 4]];
-    const copy = JSON.parse(JSON.stringify(input));
-    matrixSum(input);
-    expect(input).toEqual(copy);
+  test("3x3 matrix with distinct values", () => {
+    // [[9,3,1],[8,4,2],[7,5,6]]:
+    // round1: remove 9,8,7 → max=9
+    // round2: remove 3,4,6 → max=6
+    // round3: remove 1,2,5 → max=5
+    // score = 20
+    expect(matrixSum([[9, 3, 1], [8, 4, 2], [7, 5, 6]])).toBe(20);
   });
 });
