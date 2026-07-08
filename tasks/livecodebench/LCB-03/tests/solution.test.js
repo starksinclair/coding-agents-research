@@ -27,9 +27,13 @@ describe("LCB-03 — incremovableSubarrayCount", () => {
     expect(incremovableSubarrayCount([1, 2, 3])).toBe(6);
   });
 
-  test("strictly decreasing: only full-array removal works", () => {
-    // [3, 2, 1] — only removing the whole array leaves [] which is valid
-    expect(incremovableSubarrayCount([3, 2, 1])).toBe(1);
+  test("strictly decreasing: prefix/suffix/full removal all valid", () => {
+    // [3, 2, 1]:
+    // remove [3,2] → [1] ✓
+    // remove [2,1] → [3] ✓
+    // remove [3,2,1] → [] ✓
+    // (removing any single element leaves 2 elements still out of order)
+    expect(incremovableSubarrayCount([3, 2, 1])).toBe(3);
   });
 
   test("duplicate adjacent values: not strictly increasing", () => {
@@ -44,7 +48,11 @@ describe("LCB-03 — incremovableSubarrayCount", () => {
   });
 
   test("two elements strictly decreasing", () => {
-    // [2, 1]: only remove [2,1]→[] valid = 1
-    expect(incremovableSubarrayCount([2, 1])).toBe(1);
+    // [2, 1]:
+    // remove [2] → [1] ✓
+    // remove [1] → [2] ✓
+    // remove [2,1] → [] ✓
+    // all 3 subarrays are incremovable
+    expect(incremovableSubarrayCount([2, 1])).toBe(3);
   });
 });
